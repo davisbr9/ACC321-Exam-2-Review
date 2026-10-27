@@ -1,0 +1,1364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exam 2 Review</title>
+<meta name="description" content="Intermediate Accounting Exam 2 review: receivables, inventory, LCNRV, gross profit method, and PP&E. Learn, practice, and quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f5f2;--card:#ffffff;--ink:#1c1c1f;--muted:#66666d;--line:#e3e1db;--soft:#f1efea;
+  --accent:#b61e2e;--accent-ink:#ffffff;--accent-soft:#fbeaec;
+  --ok:#1d8048;--ok-soft:#e4f3e9;--bad:#bf3326;--bad-soft:#fbe7e4;--warn:#9a6a00;--warn-soft:#fdf3d8;
+  --radius:12px;--shadow:0 1px 2px rgba(0,0,0,.04),0 4px 14px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#141416;--card:#1d1d20;--ink:#ececef;--muted:#9c9ca5;--line:#323238;--soft:#26262b;
+    --accent:#ff5d6c;--accent-ink:#1a0a0c;--accent-soft:#3a1b20;
+    --ok:#4fc983;--ok-soft:#163324;--bad:#ff7a6b;--bad-soft:#3b1d19;--warn:#f0c14b;--warn-soft:#3a2f12;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141416;--card:#1d1d20;--ink:#ececef;--muted:#9c9ca5;--line:#323238;--soft:#26262b;
+  --accent:#ff5d6c;--accent-ink:#1a0a0c;--accent-soft:#3a1b20;
+  --ok:#4fc983;--ok-soft:#163324;--bad:#ff7a6b;--bad-soft:#3b1d19;--warn:#f0c14b;--warn-soft:#3a2f12;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+header.top{background:var(--card);border-bottom:1px solid var(--line)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0 10px}
+.brand h1{font-size:20px;margin:0;letter-spacing:-.01em}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
+.iconbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}
+nav.main{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-bottom:0}
+nav.main::-webkit-scrollbar{display:none}
+nav.main button{flex:0 0 auto;border:0;background:none;color:var(--muted);font:inherit;font-weight:500;font-size:14px;padding:10px 12px;border-bottom:2px solid transparent;cursor:pointer}
+nav.main button.on{color:var(--ink);border-color:var(--accent)}
+main{padding:24px 0 80px}
+.page{display:none}.page.on{display:block}
+.pagehead h2{font-size:26px;margin:0 0 4px;letter-spacing:-.02em}
+.pagehead p{margin:0 0 18px;color:var(--muted)}
+.subtabs{display:inline-flex;background:var(--soft);border-radius:999px;padding:4px;margin-bottom:22px;gap:2px}
+.subtabs button{border:0;background:none;font:inherit;font-size:14px;font-weight:500;color:var(--muted);padding:7px 16px;border-radius:999px;cursor:pointer}
+.subtabs button.on{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.sub{display:none}.sub.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 10px;font-size:18px;letter-spacing:-.01em}
+.card h4{margin:20px 0 8px;font-size:15px}
+.card h4:first-child{margin-top:0}
+.muted{color:var(--muted)}
+.callout{border-left:3px solid var(--accent);background:var(--accent-soft);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.tip{border-color:var(--ok);background:var(--ok-soft)}
+.callout.warn{border-color:var(--warn);background:var(--warn-soft)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+.tw{overflow-x:auto;margin:10px 0}
+th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:600;background:var(--soft)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.tot td{font-weight:600;border-top:2px solid var(--ink)}
+.jet{width:auto;min-width:320px;margin:8px 0;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px}
+.jet caption{text-align:left;font-family:Inter,sans-serif;font-weight:600;font-size:13px;padding:4px 0;color:var(--muted)}
+.jet td{border:0;padding:3px 10px}
+.jet td:nth-child(2),.jet td:nth-child(3){text-align:right;min-width:80px}
+.jet td.cr{padding-left:34px}
+.jet tr:first-child td{border-top:1px solid var(--line)}
+.jet th{background:none;border-bottom:1px solid var(--line);padding:3px 10px;font-family:Inter,sans-serif;font-size:12px;color:var(--muted)}
+.jet th:nth-child(2),.jet th:nth-child(3){text-align:right}
+.jes{display:flex;flex-wrap:wrap;gap:8px 28px}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:720px){.cols2{grid-template-columns:1fr}}
+.tacct{display:inline-grid;grid-template-columns:150px 150px;margin:8px 0;font-family:"JetBrains Mono",monospace;font-size:13px}
+.tacct .tt{grid-column:1/3;text-align:center;font-family:Inter,sans-serif;font-weight:600;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.tacct .l{border-right:2px solid var(--ink);padding:4px 10px;text-align:right}
+.tacct .r{padding:4px 10px}
+.tacct .l div,.tacct .r div{white-space:nowrap}
+.tacct .end{border-top:1px solid var(--ink);font-weight:600}
+code,.mono{font-family:"JetBrains Mono",monospace;font-size:13px;background:var(--soft);padding:1px 5px;border-radius:4px}
+.formula{font-family:"JetBrains Mono",monospace;font-size:13.5px;background:var(--soft);border-radius:8px;padding:10px 14px;margin:10px 0;white-space:pre-wrap}
+ul.tight{margin:6px 0;padding-left:20px}ul.tight li{margin:3px 0}
+/* buttons */
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:600;font-size:14px;padding:8px 14px;border-radius:8px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.sm{padding:5px 10px;font-size:13px}
+.btn:hover{filter:brightness(1.05)}
+/* problems */
+.ph{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.ph h3{margin:0}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:999px;margin-top:4px}
+.scen{background:var(--soft);border-radius:8px;padding:12px 14px;margin:10px 0}
+.step{border-top:1px dashed var(--line);margin-top:16px;padding-top:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px 18px}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:13.5px}
+label.f>span:first-child{color:var(--muted)}
+.inwrap{display:flex;align-items:center;gap:6px}
+input.ans,select.ans,.jein input,.jein select{font:inherit;font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:7px;padding:7px 9px;width:100%;min-width:0}
+input.ans{font-variant-numeric:tabular-nums}
+input.ok,select.ok{border-color:var(--ok);background:var(--ok-soft)}
+input.bad,select.bad{border-color:var(--bad);background:var(--bad-soft)}
+.mark{width:18px;flex:0 0 18px;font-weight:700;text-align:center}
+.mark.ok{color:var(--ok)}.mark.bad{color:var(--bad)}
+.pactions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.score{font-weight:600;margin-left:4px}
+.solution{margin-top:14px;border:1px solid var(--line);border-radius:10px;padding:16px;background:var(--soft)}
+.solution h4{margin-top:14px}
+.solution table th{background:var(--card)}
+/* JE builder */
+.je{margin:10px 0 16px;border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card)}
+.jehead{font-weight:600;font-size:14px;margin-bottom:6px}
+.jein{width:100%}
+.jein th{font-size:12px;color:var(--muted);background:none;padding:4px}
+.jein td{border:0;padding:3px 4px}
+.jein td:first-child{width:56%}
+.jein tr.ok select,.jein tr.ok input{border-color:var(--ok);background:var(--ok-soft)}
+.jein tr.bad select,.jein tr.bad input{border-color:var(--bad);background:var(--bad-soft)}
+.jeact{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.jemsg{font-size:13.5px}
+.jemsg.ok{color:var(--ok);font-weight:600}.jemsg.bad{color:var(--bad)}
+/* quiz */
+.qbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;margin-bottom:8px}
+.qprog{flex:1;min-width:160px;height:8px;background:var(--soft);border-radius:99px;overflow:hidden}
+.qprog i{display:block;height:100%;background:var(--accent);width:0;transition:width .25s}
+.q{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-bottom:12px}
+.q .qn{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.q .qt{font-weight:500;margin:4px 0 10px}
+.opt{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14.5px;padding:9px 12px;border-radius:8px;margin:6px 0;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt:disabled{cursor:default}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.exp{margin-top:8px;font-size:14px;padding:10px 12px;border-radius:8px;background:var(--soft)}
+.exp b.ok{color:var(--ok)}.exp b.bad{color:var(--bad)}
+.final{text-align:center;padding:26px}
+.final .big{font-size:40px;font-weight:700;letter-spacing:-.02em}
+/* overview */
+.check{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-bottom:1px solid var(--line)}
+.check input{margin-top:5px;accent-color:var(--accent)}
+.check:last-child{border:0}
+.pill{display:inline-block;font-size:12px;padding:1px 8px;border-radius:99px;background:var(--soft);color:var(--muted);margin-left:6px}
+.statgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.stat{background:var(--soft);border-radius:10px;padding:14px}
+.stat b{display:block;font-size:22px}
+.placeholder{border:2px dashed var(--line);border-radius:var(--radius);padding:28px;text-align:center;color:var(--muted)}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:30px 0}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div>
+        <h1>Exam 2 Review</h1>
+        <p>Intermediate Accounting · Chapters 6, 7, 8, and 9 (Part 1)</p>
+      </div>
+      <button class="iconbtn" id="themeBtn" aria-label="Toggle theme">Theme</button>
+    </div>
+    <nav class="main" id="nav">
+      <button data-page="overview" class="on">Overview</button>
+      <button data-page="ch6">Ch 6 Receivables</button>
+      <button data-page="ch7">Ch 7 Inventory</button>
+      <button data-page="ch8">Ch 8 LCNRV &amp; Estimates</button>
+      <button data-page="ch9">Ch 9 PP&amp;E</button>
+      <button data-page="exam">Exam Sim</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ================================================================ -->
+<!-- OVERVIEW                                                          -->
+<!-- ================================================================ -->
+<section class="page on" id="page-overview">
+  <div class="pagehead">
+    <h2>How this works</h2>
+    <p>Everything here follows the "Review Suggestions for Exam 2" sheet, using the same setups we did in class.</p>
+  </div>
+  <div class="card">
+    <h3>Exam format</h3>
+    <div class="statgrid">
+      <div class="stat"><b>~26</b>multiple-choice questions</div>
+      <div class="stat"><b>3 pts</b>each (~78 points)</div>
+      <div class="stat"><b>2</b>problems</div>
+      <div class="stat"><b>Ch 6-9</b>Ch 9 is Part 1 slides only</div>
+    </div>
+    <p class="muted" style="margin-top:14px">Each chapter has three tabs. <b>Learn</b> walks through the concepts and class examples. <b>Practice</b> gives you problems in the class format with a "New numbers" button so you can keep drilling. Answers get checked as soon as you leave a box. <b>Quiz</b> is multiple choice with instant explanations. The <b>Exam Sim</b> pulls 26 random questions from every chapter.</p>
+    <div class="callout tip">Professor's advice worth repeating: work the problem before you peek. Use "Show solution" only after you've tried every box.</div>
+  </div>
+  <div class="card">
+    <h3>Topic checklist</h3>
+    <p class="muted">Check things off as you get comfortable. Your checks are saved in this browser.</p>
+    <div id="checklist"></div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- CHAPTER 6                                                         -->
+<!-- ================================================================ -->
+<section class="page" id="page-ch6">
+  <div class="pagehead">
+    <h2>Chapter 6: Cash, Receivables, and Notes</h2>
+    <p>Sales discounts, bad debts with the allowance method, and interest on notes that cross year-end.</p>
+  </div>
+  <div class="subtabs" data-for="ch6"><button data-sub="learn" class="on">Learn</button><button data-sub="practice">Practice</button><button data-sub="quiz">Quiz</button></div>
+
+  <div class="sub on" id="ch6-learn">
+    <div class="card">
+      <h3>1. Sales discounts: gross vs. net method</h3>
+      <p>Terms of <b>2/10, n/30</b> mean the customer gets 2% off if they pay within 10 days. Otherwise the full amount is due in 30 days. This is a <b>cash discount</b> meant to get people to pay fast.</p>
+      <p>Don't mix this up with a <b>trade discount</b>, which is just a cut from list price (like 10% off for a new retail customer). Trade discounts never get recorded. You bill the customer net of the trade discount and that's the sale.</p>
+      <div class="cols2">
+        <div class="callout"><b>Gross method</b> (most common)<br>Record AR and Sales at the full invoice amount. If the customer takes the discount, debit <b>Sales Discounts</b>.</div>
+        <div class="callout"><b>Net method</b><br>Record AR and Sales at invoice <i>minus</i> the discount. If the customer misses the window, credit <b>Sales Discounts Forfeited</b>.</div>
+      </div>
+      <h4>Class example (Example 6.5)</h4>
+      <p>Two sales on account: $4,000 and $6,000, terms 2/10, n/30. The $4,000 customer pays within the discount period. The $6,000 customer pays after it.</p>
+      <div class="tw"><table>
+        <tr><th>Event</th><th>Gross method</th><th>Net method</th></tr>
+        <tr><td>Sales</td><td><table class="jet"><tr><td>Accounts Receivable</td><td>10,000</td><td></td></tr><tr><td class="cr">Sales Revenue</td><td></td><td>10,000</td></tr></table></td><td><table class="jet"><tr><td>Accounts Receivable</td><td>9,800</td><td></td></tr><tr><td class="cr">Sales Revenue</td><td></td><td>9,800</td></tr></table></td></tr>
+        <tr><td>$4,000 paid in 10 days</td><td><table class="jet"><tr><td>Cash</td><td>3,920</td><td></td></tr><tr><td>Sales Discounts</td><td>80</td><td></td></tr><tr><td class="cr">Accounts Receivable</td><td></td><td>4,000</td></tr></table></td><td><table class="jet"><tr><td>Cash</td><td>3,920</td><td></td></tr><tr><td class="cr">Accounts Receivable</td><td></td><td>3,920</td></tr></table></td></tr>
+        <tr><td>$6,000 paid after 10 days</td><td><table class="jet"><tr><td>Cash</td><td>6,000</td><td></td></tr><tr><td class="cr">Accounts Receivable</td><td></td><td>6,000</td></tr></table></td><td><table class="jet"><tr><td>Cash</td><td>6,000</td><td></td></tr><tr><td class="cr">Accounts Receivable</td><td></td><td>5,880</td></tr><tr><td class="cr">Sales Discounts Forfeited</td><td></td><td>120</td></tr></table></td></tr>
+      </table></div>
+      <h4>Where it shows up on the income statement</h4>
+      <ul class="tight">
+        <li><b>Sales Discounts</b> (gross method) is a <b>contra-revenue</b> account with a normal debit balance. It's subtracted from Sales Revenue to get net sales: $10,000 - $80 = $9,920.</li>
+        <li><b>Sales Discounts Forfeited</b> (net method) shows up under <b>Other revenues and gains</b>. Net sales is just the $9,800 Sales Revenue, and the $120 sits below operating income.</li>
+      </ul>
+      <div class="callout tip">Quick check: under the net method, the customer who pays late hands you more cash than the receivable says. That extra is the forfeited discount, so it's a credit.</div>
+    </div>
+
+    <div class="card">
+      <h3>2. Bad debts: the allowance method</h3>
+      <p>The big risk of selling on account is that some customers won't pay. GAAP wants AR reported at its <b>net realizable value (NRV)</b>, which is the amount you actually expect to collect:</p>
+      <div class="formula">Accounts Receivable
+- Allowance for Doubtful Accounts   (contra asset, normal credit balance)
+= Net realizable value of AR</div>
+      <p>The <b>direct write-off method</b> (debit Bad Debt Expense, credit AR when an account goes bad) doesn't match expense to the period of the sale and leaves AR overstated. In our class we assume companies can't use it.</p>
+      <h4>Percentage-of-receivables method (the one we use)</h4>
+      <ol class="tight">
+        <li><b>Step 1:</b> Figure out the <b>desired ending balance</b> in the allowance: % of AR (or the total from an aging schedule).</li>
+        <li><b>Step 2:</b> Bad debt expense is the <b>plug</b> that gets the allowance from its pre-adjustment balance to that desired balance.</li>
+      </ol>
+      <div class="callout warn">Most common mistake: stopping at Step 1 and calling the desired balance the expense. Always do Step 2.</div>
+      <h4>Class example: Hayes Company</h4>
+      <p>At Dec. 31, 2025, before adjusting: AR = $250,000, Allowance = $2,400 (credit, since it's a normal balance). Hayes estimates 10% of AR won't be collected.</p>
+      <p><b>Step 1:</b> $250,000 × 10% = <b>$25,000</b> desired credit balance.<br><b>Step 2:</b> $25,000 - $2,400 = <b>$22,600</b> bad debt expense.</p>
+      <div class="cols2">
+        <div>
+          <div class="tacct"><div class="tt">Allowance for Doubtful Accounts</div>
+            <div class="l"><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div></div>
+            <div class="r"><div>Bal. 2,400</div><div>Adj. 22,600</div><div class="end">End 25,000</div></div>
+          </div>
+        </div>
+        <div>
+          <table class="jet"><caption>12/31/2025 adjusting entry</caption><tr><td>Bad Debt Expense</td><td>22,600</td><td></td></tr><tr><td class="cr">Allowance for Doubtful Accounts</td><td></td><td>22,600</td></tr></table>
+        </div>
+      </div>
+      <p><b>Twist to watch for:</b> if the allowance had a <b>$2,400 debit</b> balance (more got written off than was estimated), the plug is $25,000 + $2,400 = <b>$27,400</b>.</p>
+      <p><b>Aging schedule:</b> same Step 2, but Step 1 comes from applying a different % to each age bucket. Older receivables get higher percentages since they're less likely to be collected. Add up each bucket's estimate and that's your desired balance.</p>
+      <h4>Balance sheet presentation</h4>
+      <table class="jet"><tr><td>Accounts Receivable</td><td></td><td>$250,000</td></tr><tr><td class="cr">Less: Allowance for Doubtful Accounts</td><td></td><td>(25,000)</td></tr><tr><td>Net realizable value</td><td></td><td>$225,000</td></tr></table>
+      <h4>Writing off an account (Lexington, March 2026)</h4>
+      <p>Lexington goes bankrupt owing $250. You already expensed this estimate last year, so <b>no bad debt expense now</b>:</p>
+      <table class="jet"><tr><td>Allowance for Doubtful Accounts</td><td>250</td><td></td></tr><tr><td class="cr">Accounts Receivable (Lexington)</td><td></td><td>250</td></tr></table>
+      <p>NRV doesn't move: before it's $250,000 - $25,000 = $225,000, after it's $249,750 - $24,750 = $225,000.</p>
+      <h4>Collecting an account you already wrote off (Nov. 2026)</h4>
+      <p>Lexington surprisingly pays the $250. Two entries: put the receivable back, then collect it.</p>
+      <div class="jes">
+        <table class="jet"><caption>1. Reinstate the account</caption><tr><td>Accounts Receivable (Lexington)</td><td>250</td><td></td></tr><tr><td class="cr">Allowance for Doubtful Accounts</td><td></td><td>250</td></tr></table>
+        <table class="jet"><caption>2. Record the cash</caption><tr><td>Cash</td><td>250</td><td></td></tr><tr><td class="cr">Accounts Receivable (Lexington)</td><td></td><td>250</td></tr></table>
+      </div>
+      <h4>Effects cheat sheet</h4>
+      <div class="tw"><table>
+        <tr><th>Entry</th><th>Income statement</th><th>Balance sheet</th></tr>
+        <tr><td>Adjusting entry for bad debt</td><td>Expense up, net income down</td><td>Allowance up, NRV of AR down</td></tr>
+        <tr><td>Write-off</td><td>No effect</td><td>AR and allowance both down by same amount. NRV and total assets unchanged</td></tr>
+        <tr><td>Recovery (both entries)</td><td>No effect</td><td>Cash up, allowance up, so NRV of AR down by the same amount. Total assets unchanged</td></tr>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>3. Notes receivable that cross year-end</h3>
+      <p>A note is a formal written promise to pay. Interest rates are <b>always annual</b> in our class, so:</p>
+      <div class="formula">Interest = Principal × Annual rate × (Months / 12)</div>
+      <h4>Class example: Cleveland Company</h4>
+      <p>Nov. 1, 2025: Cleveland sells goods to Harrison for $30,000 and accepts a 6-month, 6% note. Year-end is Dec. 31.</p>
+      <ul class="tight">
+        <li>Total interest: $30,000 × 6% × 6/12 = <b>$900</b>, which is $150 per month.</li>
+        <li>2025 (Nov. 1 to Dec. 31, 2 months): 2 × $150 = <b>$300</b> (needs an adjusting entry)</li>
+        <li>2026 (Jan. 1 to May 1, 4 months): 4 × $150 = <b>$600</b></li>
+      </ul>
+      <div class="jes">
+        <table class="jet"><caption>11/1/2025</caption><tr><td>Notes Receivable</td><td>30,000</td><td></td></tr><tr><td class="cr">Sales Revenue</td><td></td><td>30,000</td></tr></table>
+        <table class="jet"><caption>12/31/2025 adjusting</caption><tr><td>Interest Receivable</td><td>300</td><td></td></tr><tr><td class="cr">Interest Revenue</td><td></td><td>300</td></tr></table>
+        <table class="jet"><caption>5/1/2026 cash received</caption><tr><td>Cash</td><td>30,900</td><td></td></tr><tr><td class="cr">Notes Receivable</td><td></td><td>30,000</td></tr><tr><td class="cr">Interest Receivable</td><td></td><td>300</td></tr><tr><td class="cr">Interest Revenue</td><td></td><td>600</td></tr></table>
+      </div>
+      <p>At 12/31/2025 the balance sheet shows Notes Receivable $30,000 and Interest Receivable $300, both current assets. Only $600 of revenue is recorded in 2026 because the other $300 already hit 2025.</p>
+      <div class="callout warn">Heads up: the class slide text says these are "current liabilities" and later says "Interest Expense." For Cleveland (the lender) they're current <b>assets</b> and the account is Interest <b>Revenue</b>. Looks like a typo on the slide.</div>
+    </div>
+  </div>
+
+  <div class="sub" id="ch6-practice">
+    <div class="card problem" data-gen="discount"></div>
+    <div class="card problem" data-gen="allowance"></div>
+    <div class="card problem" data-gen="aging"></div>
+    <div class="card problem" data-gen="note"></div>
+  </div>
+  <div class="sub" id="ch6-quiz"><div class="quiz" data-bank="ch6"></div></div>
+</section>
+
+<!-- ================================================================ -->
+<!-- CHAPTER 7                                                         -->
+<!-- ================================================================ -->
+<section class="page" id="page-ch7">
+  <div class="pagehead">
+    <h2>Chapter 7: Inventory Valuation</h2>
+    <p>Perpetual vs. periodic, who owns the goods, and the six cost flow calculations.</p>
+  </div>
+  <div class="subtabs" data-for="ch7"><button data-sub="learn" class="on">Learn</button><button data-sub="practice">Practice</button><button data-sub="quiz">Quiz</button></div>
+
+  <div class="sub on" id="ch7-learn">
+    <div class="card">
+      <h3>1. Perpetual vs. periodic</h3>
+      <div class="tw"><table>
+        <tr><th></th><th>Perpetual</th><th>Periodic</th></tr>
+        <tr><td>Buying merchandise</td><td>Debit <b>Inventory</b></td><td>Debit <b>Purchases</b></td></tr>
+        <tr><td>Making a sale</td><td><b>Two</b> entries: record the sale, and record COGS / reduce Inventory</td><td><b>One</b> entry: record the sale only</td></tr>
+        <tr><td>When COGS is recorded</td><td>Every time a sale happens</td><td>At the end of the period, with a "big" adjusting entry</td></tr>
+        <tr><td>Freight-in, returns, discounts</td><td>Go straight to Inventory</td><td>Separate accounts: Freight-In, Purchase Returns and Allowances, Purchase Discounts</td></tr>
+      </table></div>
+      <h4>Class example</h4>
+      <p>Beginning inventory $30. Buy $120 on account. Sell goods that cost $100 for $125.</p>
+      <div class="cols2">
+        <div><b>Perpetual</b>
+          <table class="jet"><caption>Purchase</caption><tr><td>Inventory</td><td>120</td><td></td></tr><tr><td class="cr">Accounts Payable</td><td></td><td>120</td></tr></table>
+          <table class="jet"><caption>Sale (two entries)</caption><tr><td>Accounts Receivable</td><td>125</td><td></td></tr><tr><td class="cr">Sales Revenue</td><td></td><td>125</td></tr><tr><td>Cost of Goods Sold</td><td>100</td><td></td></tr><tr><td class="cr">Inventory</td><td></td><td>100</td></tr></table>
+        </div>
+        <div><b>Periodic</b>
+          <table class="jet"><caption>Purchase</caption><tr><td>Purchases</td><td>120</td><td></td></tr><tr><td class="cr">Accounts Payable</td><td></td><td>120</td></tr></table>
+          <table class="jet"><caption>Sale (one entry)</caption><tr><td>Accounts Receivable</td><td>125</td><td></td></tr><tr><td class="cr">Sales Revenue</td><td></td><td>125</td></tr></table>
+        </div>
+      </div>
+      <p>Under periodic, the Inventory account still says $30 all year until the adjusting entry.</p>
+      <h4>Perpetual: year-end physical count adjustment</h4>
+      <p>You count inventory at year-end under <b>both</b> systems. Under perpetual, the count almost never matches the book balance, so:</p>
+      <ul class="tight">
+        <li>Count is <b>less</b> than the Inventory account: debit COGS, credit Inventory for the difference.</li>
+        <li>Count is <b>more</b> than the Inventory account: debit Inventory, credit COGS.</li>
+      </ul>
+      <h4>Periodic: the "big" adjusting entry (know the accounts, you won't have to prepare it)</h4>
+      <p>It does three things at once:</p>
+      <ul class="tight">
+        <li>Moves <b>Inventory</b> from its beginning balance to the ending balance from the count</li>
+        <li>Records <b>Cost of Goods Sold</b> (the number from the schedule below)</li>
+        <li>Closes out <b>Purchases, Freight-In, Purchase Returns and Allowances, and Purchase Discounts</b></li>
+      </ul>
+      <p>For the $30/$120 example, if the count shows $50 on hand: debit Inventory $20, debit COGS $100, credit Purchases $120.</p>
+      <h4>Schedule of cost of goods sold</h4>
+      <table class="jet">
+        <tr><td>Beginning inventory</td><td></td><td>XXX</td></tr>
+        <tr><td>+ Purchases</td><td>XXX</td><td></td></tr>
+        <tr><td>+ Freight-in</td><td>XXX</td><td></td></tr>
+        <tr><td>- Purchase returns &amp; allowances</td><td>(XXX)</td><td></td></tr>
+        <tr><td>- Purchase discounts</td><td>(XXX)</td><td></td></tr>
+        <tr><td>= Cost of goods purchased</td><td></td><td>XXX</td></tr>
+        <tr><td>= Cost of goods available for sale</td><td></td><td>XXX</td></tr>
+        <tr><td>- Ending inventory</td><td></td><td>(XXX)</td></tr>
+        <tr><td>= Cost of goods sold</td><td></td><td>XXX</td></tr>
+      </table>
+      <div class="callout tip">The big idea: <b>cost of goods available for sale gets split two ways</b>, into ending inventory and COGS. Anything that bumps COGAS up (more purchases, freight-in) or down (returns, discounts) flows into one of those two buckets.</div>
+      <p><b>Purchase discounts</b> in the periodic system: we use the gross method (record the purchase at invoice, credit Purchase Discounts if you pay in time). Under the net method, paying late creates <b>Purchase Discounts Lost</b>, reported under Other expenses and losses.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Who owns the inventory?</h3>
+      <h4>Goods in transit</h4>
+      <div class="tw"><table>
+        <tr><th>Terms</th><th>Title passes to buyer</th><th>Seller recognizes revenue</th><th>Goods in transit belong to</th></tr>
+        <tr><td><b>FOB shipping point</b></td><td>When goods leave the seller's dock</td><td>At shipment</td><td><b>Buyer</b></td></tr>
+        <tr><td><b>FOB destination</b></td><td>When goods arrive at the buyer</td><td>At delivery</td><td><b>Seller</b></td></tr>
+      </table></div>
+      <h4>Consigned goods</h4>
+      <p>The <b>consignor</b> is the owner who sends the goods out. The <b>consignee</b> holds and sells them for the owner. The consignor keeps title until the consignee sells to an end customer, so <b>consigned goods are always the consignor's inventory</b>.</p>
+      <p>Class example: a seed company (consignor) ships seed packets to a store (consignee). The store sells them to you and me, returns the leftovers at the end of the season, and pays the seed company for what sold. The seeds sitting in the store belong on the seed company's books.</p>
+      <h4>Class example: Marsh Company</h4>
+      <p>The physical count says $502,000. These items weren't included. Were they handled right?</p>
+      <div class="tw"><table>
+        <tr><th>Item</th><th>Correct treatment</th><th class="n">Adjustment</th></tr>
+        <tr><td>$61,000 held by Marsh on consignment</td><td>Marsh is the consignee, so it's not Marsh's. Correctly excluded.</td><td class="n">0</td></tr>
+        <tr><td>$38,000 shipped by Marsh to a customer FOB destination on Dec. 31, arrives Jan. 7</td><td>Title hasn't passed. Still Marsh's, so add it.</td><td class="n">+38,000</td></tr>
+        <tr><td>$51,000 shipped to Marsh FOB shipping point on Dec. 31, received Jan. 3</td><td>Title passed when it shipped. It's Marsh's, so add it.</td><td class="n">+51,000</td></tr>
+        <tr class="tot"><td colspan="2">Correct inventory</td><td class="n">$591,000</td></tr>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>3. Cost flow assumptions</h3>
+      <p>The assumption you pick does <b>not</b> have to match how goods physically move. LIFO can't literally happen for a grocery store, and that's fine. It's just how costs get assigned.</p>
+      <ul class="tight">
+        <li><b>Specific identification:</b> track the actual cost of each item. Works for a small number of expensive, distinct items. Matches cost flow to physical flow, but can be used to manipulate income (sell the cheaper identical unit first).</li>
+        <li><b>Average cost:</b> periodic uses one weighted average for the whole period. Perpetual uses a <b>moving average</b> that gets recomputed after every purchase. Hard to manipulate, easy to use.</li>
+        <li><b>FIFO:</b> oldest costs go to COGS first. Ending inventory sits close to current cost. Doesn't match current costs against current revenue.</li>
+        <li><b>LIFO:</b> newest costs go to COGS first. Better matching of current costs to revenue. Ending inventory is stuck at old costs. <b>Not allowed under IFRS.</b></li>
+      </ul>
+      <h4>Class example: Roosevelt Company</h4>
+      <p>Beginning inventory on Oct. 1: 1,000 units at $5.</p>
+      <div class="tw"><table style="max-width:520px">
+        <tr><th>Date</th><th>Purchases</th><th>Sales</th></tr>
+        <tr><td>Oct. 6</td><td>200 units at $8</td><td></td></tr>
+        <tr><td>Oct. 10</td><td></td><td>500 units at $12</td></tr>
+        <tr><td>Oct. 22</td><td>300 units at $9</td><td></td></tr>
+        <tr><td>Oct. 29</td><td></td><td>100 units at $12</td></tr>
+      </table></div>
+      <ul class="tight">
+        <li>Units available: 1,000 + 200 + 300 = <b>1,500</b></li>
+        <li>Cost of goods available: $5,000 + $1,600 + $2,700 = <b>$9,300</b></li>
+        <li>Units sold: 500 + 100 = <b>600</b>, so units in ending inventory = <b>900</b></li>
+      </ul>
+      <h4>Periodic (apply the assumption once, at the end of October)</h4>
+      <p><b>Weighted average:</b> $9,300 / 1,500 = <b>$6.20</b> per unit. EI = 900 × $6.20 = <b>$5,580</b>. COGS = 600 × $6.20 = <b>$3,720</b>. The professor's tip: compute both with the average, then make sure they add to $9,300. That catches math errors.</p>
+      <div class="cols2">
+        <div><b>FIFO</b>: EI is the 900 most recent units
+          <table class="jet"><tr><td>300 × $9</td><td></td><td>2,700</td></tr><tr><td>200 × $8</td><td></td><td>1,600</td></tr><tr><td>400 × $5</td><td></td><td>2,000</td></tr><tr><td>Ending inventory</td><td></td><td>6,300</td></tr></table>
+          COGS = 600 × $5 = <b>$3,000</b>
+        </div>
+        <div><b>LIFO</b>: EI is the 900 earliest units
+          <table class="jet"><tr><td>900 × $5</td><td></td><td>4,500</td></tr></table>
+          COGS = 300 × $9 + 200 × $8 + 100 × $5 = <b>$4,800</b>
+        </div>
+      </div>
+      <h4>Perpetual (apply the assumption at every sale)</h4>
+      <p><b>Moving average:</b> new average after every purchase. COGS for each sale uses the most recent average.</p>
+      <div class="tw"><table>
+        <tr><th>Date</th><th>Purchases</th><th>Sold (COGS)</th><th>Balance</th></tr>
+        <tr><td>Oct. 1</td><td>1,000 at $5 = $5,000</td><td></td><td>1,000 at $5.00 = $5,000</td></tr>
+        <tr><td>Oct. 6</td><td>200 at $8 = $1,600</td><td></td><td>($5,000 + $1,600) / 1,200 = <b>$5.50</b><br>1,200 at $5.50 = $6,600</td></tr>
+        <tr><td>Oct. 10</td><td></td><td>500 at $5.50 = $2,750</td><td>700 at $5.50 = $3,850</td></tr>
+        <tr><td>Oct. 22</td><td>300 at $9 = $2,700</td><td></td><td>($3,850 + $2,700) / 1,000 = <b>$6.55</b><br>1,000 at $6.55 = $6,550</td></tr>
+        <tr><td>Oct. 29</td><td></td><td>100 at $6.55 = $655</td><td>900 at $6.55 = <b>$5,895</b></td></tr>
+      </table></div>
+      <p>EI = <b>$5,895</b>. COGS = $2,750 + $655 = <b>$3,405</b>.</p>
+      <p><b>FIFO perpetual:</b> Oct. 10 sale takes 500 at $5 ($2,500). Oct. 29 takes 100 at $5 ($500). COGS = <b>$3,000</b>, EI = <b>$6,300</b>. Same as FIFO periodic, which is always true. The oldest units are the oldest units no matter when you ask.</p>
+      <p><b>LIFO perpetual:</b> Oct. 10 sale takes 200 at $8 ($1,600) plus 300 at $5 ($1,500) = $3,100. Oct. 29 takes 100 at $9 ($900). COGS = <b>$4,000</b>. EI = 700 at $5 + 200 at $9 = <b>$5,300</b>. Different from LIFO periodic because the Oct. 10 sale couldn't "see" the Oct. 22 purchase yet.</p>
+      <div class="callout tip">Layer tip from class: in every row, list the earliest layer on top and the most recent on the bottom, for both FIFO and LIFO. FIFO eats from the top, LIFO eats from the bottom. Keeping it consistent cuts down on errors.</div>
+      <h4>Comparing the results (revenue = 600 × $12 = $7,200)</h4>
+      <div class="tw"><table>
+        <tr><th></th><th class="n">Periodic avg</th><th class="n">Periodic FIFO</th><th class="n">Periodic LIFO</th><th class="n">Moving avg</th><th class="n">Perpetual FIFO</th><th class="n">Perpetual LIFO</th></tr>
+        <tr><td>Ending inventory</td><td class="n">5,580</td><td class="n">6,300</td><td class="n">4,500</td><td class="n">5,895</td><td class="n">6,300</td><td class="n">5,300</td></tr>
+        <tr><td>COGS</td><td class="n">3,720</td><td class="n">3,000</td><td class="n">4,800</td><td class="n">3,405</td><td class="n">3,000</td><td class="n">4,000</td></tr>
+        <tr><td>Gross profit</td><td class="n">3,480</td><td class="n">4,200</td><td class="n">2,400</td><td class="n">3,795</td><td class="n">4,200</td><td class="n">3,200</td></tr>
+      </table></div>
+      <div class="tw"><table>
+        <tr><th>Prices are...</th><th>Highest EI</th><th>Highest COGS</th><th>Highest gross profit</th></tr>
+        <tr><td><b>Rising</b> (Roosevelt)</td><td>FIFO</td><td>LIFO</td><td>FIFO</td></tr>
+        <tr><td><b>Falling</b></td><td>LIFO</td><td>FIFO</td><td>LIFO</td></tr>
+      </table></div>
+      <p>Average cost always lands in between. And a company can't flip methods to manage earnings. It needs a good reason to change.</p>
+    </div>
+  </div>
+
+  <div class="sub" id="ch7-practice">
+    <div class="card problem" data-gen="perpPer"></div>
+    <div class="card problem" data-gen="inventory"></div>
+    <div class="card problem" data-gen="countAdj"></div>
+    <div class="card problem" data-gen="ownership"></div>
+    <div class="card problem" data-gen="schedule"></div>
+  </div>
+  <div class="sub" id="ch7-quiz"><div class="quiz" data-bank="ch7"></div></div>
+</section>
+
+<!-- ================================================================ -->
+<!-- CHAPTER 8                                                         -->
+<!-- ================================================================ -->
+<section class="page" id="page-ch8">
+  <div class="pagehead">
+    <h2>Chapter 8: LCNRV and the Gross Profit Method</h2>
+    <p>Writing inventory down when it loses value, and estimating inventory when you can't count it.</p>
+  </div>
+  <div class="subtabs" data-for="ch8"><button data-sub="learn" class="on">Learn</button><button data-sub="practice">Practice</button><button data-sub="quiz">Quiz</button></div>
+
+  <div class="sub on" id="ch8-learn">
+    <div class="card">
+      <h3>1. Lower-of-cost-or-net-realizable-value (LCNRV)</h3>
+      <p><b>Why companies do it:</b> once inventory's future usefulness (its ability to bring in revenue) drops below what you paid, reporting it at cost would overstate the asset. So you leave the historical cost principle behind, write it down, and recognize the loss in the period the value actually dropped, not later when it sells.</p>
+      <div class="formula">  Estimated selling price
+- Estimated cost to complete
+- Estimated cost to sell (disposal, transportation)
+= Net realizable value</div>
+      <p>Then for <b>each individual item</b> (that's how we apply it), report the lower of cost or NRV. The total write-down is total cost minus total LCNRV.</p>
+      <h4>Worked example</h4>
+      <div class="tw"><table>
+        <tr><th>Item</th><th class="n">Cost</th><th class="n">Selling price</th><th class="n">Cost to complete</th><th class="n">Cost to sell</th><th class="n">NRV</th><th class="n">LCNRV</th></tr>
+        <tr><td>Road bikes</td><td class="n">48,000</td><td class="n">60,000</td><td class="n">0</td><td class="n">5,000</td><td class="n">55,000</td><td class="n">48,000</td></tr>
+        <tr><td>Helmets</td><td class="n">12,000</td><td class="n">13,000</td><td class="n">500</td><td class="n">2,000</td><td class="n">10,500</td><td class="n">10,500</td></tr>
+        <tr><td>Bike frames</td><td class="n">30,000</td><td class="n">38,000</td><td class="n">6,000</td><td class="n">3,500</td><td class="n">28,500</td><td class="n">28,500</td></tr>
+        <tr class="tot"><td>Total</td><td class="n">90,000</td><td></td><td></td><td></td><td></td><td class="n">87,000</td></tr>
+      </table></div>
+      <p>Write-down = $90,000 - $87,000 = <b>$3,000</b>. Notice the bikes' extra $7,000 of NRV doesn't offset the losses on the other items. That's the whole point of the item-by-item approach.</p>
+      <h4>The entry (perpetual system)</h4>
+      <p>You may see either version:</p>
+      <div class="jes">
+        <table class="jet"><caption>Loss method</caption><tr><td>Inventory Loss</td><td>3,000</td><td></td></tr><tr><td class="cr">Inventory</td><td></td><td>3,000</td></tr></table>
+        <table class="jet"><caption>COGS method</caption><tr><td>Cost of Goods Sold</td><td>3,000</td><td></td></tr><tr><td class="cr">Inventory</td><td></td><td>3,000</td></tr></table>
+      </div>
+      <div class="callout">Exception: companies using <b>LIFO or the retail inventory method</b> can use lower-of-cost-or-market (LCM) instead. You don't need to know how to do LCM, just that the exception exists.</div>
+    </div>
+
+    <div class="card">
+      <h3>2. Gross profit method (estimating inventory)</h3>
+      <p>Used when you need an inventory number but can't do a count: interim reports, or inventory got destroyed in a fire or flood.</p>
+      <p>Same setup as the Hoover slide (numbers mine): Inventory Jan. 1 = $150,000, purchases in January = $200,000, sales revenue = $400,000, normal gross profit = 35% of selling price.</p>
+      <ol class="tight">
+        <li>Cost of goods available: $150,000 + $200,000 = <b>$350,000</b></li>
+        <li>If 35% of sales is gross profit, then <b>65% of sales is COGS</b>: $400,000 × 65% = <b>$260,000</b></li>
+        <li>Estimated ending inventory: $350,000 - $260,000 = <b>$90,000</b></li>
+      </ol>
+      <div class="callout warn"><b>Watch the wording.</b> If the problem says sales are made at "40% <b>over cost</b>" (a markup on cost), convert it first:<br><span class="mono">GP % of selling price = 40% / (100% + 40%) = 28.571%</span><br>Then COGS is 71.429% of sales. Using 40% straight up is the classic trap. Another way to see it: COGS = Sales / 1.40.</div>
+      <h4>Presentation</h4>
+      <p>Companies disclose the composition of inventory, any inventory financing arrangements, and the costing method used, and they have to apply that method consistently from period to period.</p>
+    </div>
+  </div>
+
+  <div class="sub" id="ch8-practice">
+    <div class="card problem" data-gen="lcnrv"></div>
+    <div class="card problem" data-gen="grossProfit"></div>
+  </div>
+  <div class="sub" id="ch8-quiz"><div class="quiz" data-bank="ch8"></div></div>
+</section>
+
+<!-- ================================================================ -->
+<!-- CHAPTER 9 (PART 1)                                                -->
+<!-- Waiting on the Chapter 9 Part 1 slide deck.                       -->
+<!-- ================================================================ -->
+<section class="page" id="page-ch9">
+  <div class="pagehead">
+    <h2>Chapter 9 (Part 1): Property, Plant, and Equipment</h2>
+    <p>Acquisition costs, basket purchases, interest capitalization, and selling assets.</p>
+  </div>
+  <div class="subtabs" data-for="ch9"><button data-sub="learn" class="on">Learn</button><button data-sub="practice">Practice</button><button data-sub="quiz">Quiz</button></div>
+
+  <div class="sub on" id="ch9-learn">
+<!-- ===== CH9 LEARN START: replace everything between START and END with the Chapter 9 learn cards ===== -->
+    <div class="card">
+      <div class="placeholder">
+        <h3 style="color:var(--ink)">Chapter 9 content is coming</h3>
+        <p>This section fills in once the Part 1 slides are uploaded. Here's what the review sheet says you need to know:</p>
+      </div>
+      <ul class="tight" style="margin-top:16px">
+        <li>Why costs other than the purchase price get added to PP&amp;E accounts</li>
+        <li>What "capitalizing" a cost means</li>
+        <li>Accounting for an asset acquired in exchange for common stock</li>
+        <li>Basket (lump sum) purchases</li>
+        <li>Whether an asset qualifies for interest capitalization</li>
+        <li>The capitalization period</li>
+        <li>The five-step process for capitalized interest (watch: weighted-average accumulated expenditures, weighted-average rate on general debt, using the right rates for avoidable interest)</li>
+        <li>How actual and capitalized interest show up in the financial statements</li>
+        <li>Gain or loss on the sale of PP&amp;E (record depreciation up to the sale date first), the journal entry, and the income statement effect</li>
+      </ul>
+    </div>
+<!-- ===== CH9 LEARN END ===== -->
+  </div>
+  <div class="sub" id="ch9-practice">
+<!-- ===== CH9 PRACTICE START: add <div class="card problem" data-gen="NAME"></div> lines here ===== -->
+    <div class="card"><div class="placeholder">Chapter 9 practice problems will go here.</div></div>
+<!-- ===== CH9 PRACTICE END ===== -->
+  </div>
+  <div class="sub" id="ch9-quiz"><div class="quiz" data-bank="ch9"></div></div>
+</section>
+
+<!-- ================================================================ -->
+<!-- EXAM SIM                                                          -->
+<!-- ================================================================ -->
+<section class="page" id="page-exam">
+  <div class="pagehead">
+    <h2>Exam simulator</h2>
+    <p>26 random multiple-choice questions from every chapter, 3 points each, like the real thing. You get feedback as you go and a score at the end.</p>
+  </div>
+  <div id="examArea">
+    <div class="card" style="text-align:center">
+      <p class="muted" id="examPoolNote"></p>
+      <button class="btn" id="startExam">Start a new exam</button>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="wrap">Built for Exam 2 review. Practice numbers are randomly generated in the same format as class examples.</footer>
+
+<script>
+/* =================================================================
+   UTILITIES
+   ================================================================= */
+const r2 = n => Math.round((n + Number.EPSILON) * 100) / 100;
+const rnd = (a, b, step = 1) => a + step * Math.floor(Math.random() * (Math.floor((b - a) / step) + 1));
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const sum = a => a.reduce((s, x) => s + x, 0);
+function fmtNum(n) {
+  const v = Math.abs(n);
+  const cents = Math.round(v * 100) % 100 !== 0;
+  return v.toLocaleString('en-US', { minimumFractionDigits: cents ? 2 : 0, maximumFractionDigits: 2 });
+}
+const money = n => (n < 0 ? '-' : '') + '$' + fmtNum(n);
+const num = n => (n < 0 ? '-' : '') + fmtNum(n);
+const cost2 = n => '$' + Math.abs(n).toFixed(2);          // unit costs always show cents
+function parseNum(s) {
+  if (s == null) return NaN;
+  s = String(s).trim();
+  if (!s) return NaN;
+  let neg = false;
+  if (/^\(.*\)$/.test(s)) { neg = true; s = s.slice(1, -1); }
+  s = s.replace(/[$,%\s]/g, '');
+  if (!s) return NaN;
+  const v = parseFloat(s);
+  return isNaN(v) ? NaN : (neg ? -v : v);
+}
+const CO = ['Polk', 'Tyler', 'Grant', 'Monroe', 'Madison', 'Adams', 'Pierce', 'Taft', 'Coolidge', 'Garfield', 'Arthur', 'Fillmore', 'Lincoln', 'Wilson', 'Truman', 'Hayes', 'Jackson'];
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+const ACCTS = [
+  'Accounts Payable', 'Accounts Receivable', 'Allowance for Doubtful Accounts', 'Bad Debt Expense', 'Cash',
+  'Cost of Goods Sold', 'Freight-In', 'Interest Receivable', 'Interest Revenue', 'Inventory', 'Inventory Loss',
+  'Notes Receivable', 'Purchase Discounts', 'Purchase Returns and Allowances', 'Purchases', 'Sales Discounts',
+  'Sales Discounts Forfeited', 'Sales Revenue'
+];
+
+/* Input helpers used inside generated problem HTML */
+function inp(key, opts = {}) {
+  return `<span class="inwrap"><input class="ans" data-k="${key}" ${opts.tol != null ? `data-tol="${opts.tol}"` : ''} inputmode="decimal" autocomplete="off" placeholder="${opts.ph || ''}"><span class="mark"></span></span>`;
+}
+function sel(key, options) {
+  return `<span class="inwrap"><select class="ans" data-k="${key}"><option value="">Choose one</option>${options.map(o => `<option>${o}</option>`).join('')}</select><span class="mark"></span></span>`;
+}
+const f = (label, key, opts) => `<label class="f"><span>${label}</span>${inp(key, opts)}</label>`;
+const fs = (label, key, options) => `<label class="f"><span>${label}</span>${sel(key, options)}</label>`;
+const je = (id) => `<div class="je" data-je="${id}"></div>`;
+
+function jeTable(lines, cap) {
+  return `<table class="jet">${cap ? `<caption>${cap}</caption>` : ''}${lines.map(l =>
+    `<tr><td class="${l.c != null ? 'cr' : ''}">${l.a}</td><td>${l.d != null ? num(l.d) : ''}</td><td>${l.c != null ? num(l.c) : ''}</td></tr>`).join('')}</table>`;
+}
+function tAcct(title, left, right, endSide, endVal) {
+  const L = left.map(x => `<div>${x}</div>`), R = right.map(x => `<div>${x}</div>`);
+  const n = Math.max(L.length, R.length);
+  while (L.length < n) L.push('<div>&nbsp;</div>');
+  while (R.length < n) R.push('<div>&nbsp;</div>');
+  if (endSide === 'l') { L.push(`<div class="end">End ${num(endVal)}</div>`); R.push('<div class="end">&nbsp;</div>'); }
+  else { R.push(`<div class="end">End ${num(endVal)}</div>`); L.push('<div class="end">&nbsp;</div>'); }
+  return `<div class="tacct"><div class="tt">${title}</div><div class="l">${L.join('')}</div><div class="r">${R.join('')}</div></div>`;
+}
+
+/* =================================================================
+   JOURNAL ENTRY BUILDER
+   cfg = { label, answers: [ [ {a, d} | {a, c}, ... ], (alt entry)... ], hint }
+   ================================================================= */
+function nearAmt(u, ans) { return !isNaN(u) && Math.abs(u - ans) <= Math.max(0.51, Math.abs(ans) * 0.001); }
+function buildJE(div, cfg) {
+  const n = cfg.rows || (Math.max(...cfg.answers.map(a => a.length)) + 1);
+  const opts = '<option value="">Select account</option>' + ACCTS.map(a => `<option>${a}</option>`).join('');
+  div.innerHTML = `<div class="jehead">${cfg.label || 'Journal entry'}</div>
+    <table class="jein"><thead><tr><th>Account</th><th>Debit</th><th>Credit</th></tr></thead><tbody>
+    ${Array.from({ length: n }, () => `<tr><td><select>${opts}</select></td><td><input class="dr" inputmode="decimal" autocomplete="off"></td><td><input class="cr" inputmode="decimal" autocomplete="off"></td></tr>`).join('')}
+    </tbody></table>
+    <div class="jeact"><button class="btn sm" type="button">Check entry</button><span class="jemsg"></span></div>`;
+  div.querySelector('button').onclick = () => checkJE(div, cfg);
+  div._check = () => checkJE(div, cfg);
+}
+function checkJE(div, cfg) {
+  const rows = [...div.querySelectorAll('tbody tr')];
+  const user = rows.map(tr => ({ tr, a: tr.querySelector('select').value, d: parseNum(tr.querySelector('.dr').value), c: parseNum(tr.querySelector('.cr').value) }));
+  rows.forEach(tr => tr.classList.remove('ok', 'bad'));
+  const filled = user.filter(u => u.a || !isNaN(u.d) || !isNaN(u.c));
+  const msg = div.querySelector('.jemsg');
+  if (!filled.length) { msg.className = 'jemsg bad'; msg.textContent = 'Fill in the entry first.'; return false; }
+  let best = null;
+  for (const ans of cfg.answers) {
+    const used = new Set(); const okRows = new Set(); let matched = 0; const missing = [];
+    for (const line of ans) {
+      const idx = filled.findIndex((u, i) => !used.has(i) && u.a === line.a &&
+        (line.d != null ? (nearAmt(u.d, line.d) && isNaN(u.c)) : (nearAmt(u.c, line.c) && isNaN(u.d))));
+      if (idx >= 0) { used.add(idx); okRows.add(filled[idx].tr); matched++; } else missing.push(line);
+    }
+    const extras = filled.length - matched;
+    const score = matched * 10 - extras;
+    if (!best || score > best.score) best = { ans, okRows, matched, extras, missing, score };
+  }
+  filled.forEach(u => u.tr.classList.add(best.okRows.has(u.tr) ? 'ok' : 'bad'));
+  const perfect = best.matched === best.ans.length && best.extras === 0;
+  if (perfect) { msg.className = 'jemsg ok'; msg.textContent = 'Correct. Every line matches.'; return true; }
+  const dr = sum(filled.map(u => isNaN(u.d) ? 0 : u.d)), cr = sum(filled.map(u => isNaN(u.c) ? 0 : u.c));
+  const notes = [`${best.matched} of ${best.ans.length} lines right.`];
+  if (Math.abs(dr - cr) > 0.5) notes.push(`Your debits (${money(dr)}) and credits (${money(cr)}) don't balance.`);
+  const accts = filled.map(u => u.a);
+  const sideMix = best.missing.find(l => accts.includes(l.a));
+  if (sideMix) notes.push(`You have ${sideMix.a} in there, but check its amount or whether it's a debit or credit.`);
+  else if (best.missing.length) notes.push('At least one account is missing or wrong.');
+  if (best.extras > best.ans.length - best.matched) notes.push('You have an extra line.');
+  if (cfg.hint) notes.push('Hint: ' + cfg.hint);
+  msg.className = 'jemsg bad'; msg.textContent = notes.join(' ');
+  return false;
+}
+
+/* =================================================================
+   PROBLEM FRAMEWORK
+   gen(useClass) returns { title, tag, html, answers:{key:value}, jes:{id:cfg}, solution }
+   ================================================================= */
+const GENS = {};
+function mountProblem(el) {
+  const gen = GENS[el.dataset.gen];
+  if (!gen) return;
+  let state;
+  function render(useClass) {
+    state = gen(useClass);
+    el.innerHTML = `<div class="ph"><div><h3>${state.title}</h3>${state.tag ? `<span class="tag">${state.tag}</span>` : ''}</div>
+      <button class="btn ghost sm newnums" type="button">New numbers</button></div>
+      <div class="pbody">${state.html}</div>
+      <div class="pactions"><button class="btn checkall" type="button">Check everything</button>
+      <button class="btn ghost showsol" type="button">Show solution</button>
+      <button class="btn ghost clearp" type="button">Clear</button><span class="score"></span></div>
+      <div class="solution" hidden>${state.solution}</div>`;
+    el.querySelectorAll('.je').forEach(d => buildJE(d, state.jes[d.dataset.je]));
+    el.querySelectorAll('.ans').forEach(i => {
+      i.addEventListener('change', () => checkInput(i));
+      i.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); checkInput(i); } });
+    });
+    el.querySelector('.newnums').onclick = () => render(false);
+    el.querySelector('.clearp').onclick = () => { const cls = state.isClass; render(cls); };
+    el.querySelector('.showsol').onclick = (e) => {
+      const s = el.querySelector('.solution'); s.hidden = !s.hidden;
+      e.target.textContent = s.hidden ? 'Show solution' : 'Hide solution';
+    };
+    el.querySelector('.checkall').onclick = () => {
+      let ok = 0, tot = 0;
+      el.querySelectorAll('.ans').forEach(i => { tot++; if (checkInput(i, true)) ok++; });
+      el.querySelectorAll('.je').forEach(d => { tot++; if (d._check()) ok++; });
+      const sc = el.querySelector('.score');
+      sc.textContent = `${ok} / ${tot} correct` + (ok === tot ? '. Clean sweep.' : '');
+      sc.style.color = ok === tot ? 'var(--ok)' : 'var(--ink)';
+    };
+  }
+  function checkInput(i, force) {
+    const k = i.dataset.k, ans = state.answers[k], mark = i.parentElement.querySelector('.mark');
+    i.classList.remove('ok', 'bad'); mark.className = 'mark'; mark.textContent = '';
+    if (i.value === '' && !force) return false;
+    let good;
+    if (typeof ans === 'string') good = i.value === ans;
+    else {
+      const v = parseNum(i.value);
+      const tol = i.dataset.tol != null ? parseFloat(i.dataset.tol) : Math.max(1, Math.abs(ans) * 0.002);
+      good = !isNaN(v) && Math.abs(v - ans) <= tol + 1e-9;
+    }
+    i.classList.add(good ? 'ok' : 'bad'); mark.classList.add(good ? 'ok' : 'bad'); mark.textContent = good ? '✓' : '✗';
+    return good;
+  }
+  render(true);
+}
+
+/* =================================================================
+   CHAPTER 6 GENERATORS
+   ================================================================= */
+GENS.discount = (cls) => {
+  const co = cls ? 'Taylor' : pick(CO);
+  const amt = cls ? 4000 : rnd(2000, 24000, 500);
+  const d = cls ? 2 : pick([1, 2, 3]);
+  const within = cls ? true : Math.random() < 0.5;
+  const days = within ? rnd(3, 10) : rnd(14, 30);
+  const disc = r2(amt * d / 100), net = r2(amt - disc);
+  const AR = 'Accounts Receivable', S = 'Sales Revenue';
+  const jes = {
+    gs: { label: 'Gross method: record the sale', answers: [[{ a: AR, d: amt }, { a: S, c: amt }]] },
+    gp: { label: 'Gross method: record the payment', answers: [within ? [{ a: 'Cash', d: net }, { a: 'Sales Discounts', d: disc }, { a: AR, c: amt }] : [{ a: 'Cash', d: amt }, { a: AR, c: amt }]], hint: within ? 'The receivable is still on the books at the full amount.' : 'No discount, so nothing fancy here.' },
+    ns: { label: 'Net method: record the sale', answers: [[{ a: AR, d: net }, { a: S, c: net }]], hint: 'Under the net method you assume the customer takes the discount.' },
+    np: { label: 'Net method: record the payment', answers: [within ? [{ a: 'Cash', d: net }, { a: AR, c: net }] : [{ a: 'Cash', d: amt }, { a: AR, c: net }, { a: 'Sales Discounts Forfeited', c: disc }]], hint: within ? 'The receivable is already at the net amount.' : 'The customer pays more than the receivable balance. Where does the extra go?' }
+  };
+  const answers = {
+    cash: within ? net : amt,
+    netSalesG: within ? net : amt,
+    sdf: within ? 0 : disc,
+    sdLoc: 'Contra-revenue (subtracted from sales)',
+    sdfLoc: 'Other revenues and gains'
+  };
+  const locs = ['Contra-revenue (subtracted from sales)', 'Other revenues and gains', 'Operating expense', 'Other expenses and losses'];
+  const html = `<p class="scen">${co} Company sells merchandise for <b>${money(amt)}</b> on account with terms <b>${d}/10, n/30</b>. The customer pays <b>${days} days</b> after the sale.</p>
+    ${je('gs')}${je('gp')}${je('ns')}${je('np')}
+    <div class="step"><h4>Income statement effects</h4><div class="grid">
+      ${f('Cash collected from the customer', 'cash')}
+      ${f('Net sales reported (gross method)', 'netSalesG')}
+      ${f('Sales Discounts Forfeited (net method, enter 0 if none)', 'sdf', { tol: 0.5 })}
+      ${fs('Where Sales Discounts appears', 'sdLoc', locs)}
+      ${fs('Where Sales Discounts Forfeited appears', 'sdfLoc', locs)}
+    </div></div>`;
+  const solution = `<p>Discount = ${money(amt)} × ${d}% = <b>${money(disc)}</b>. Net amount = <b>${money(net)}</b>. The customer paid in ${days} days, which is ${within ? '<b>inside</b>' : '<b>outside</b>'} the 10-day window.</p>
+    <h4>Gross method</h4><div class="jes">${jeTable(jes.gs.answers[0], 'Sale')}${jeTable(jes.gp.answers[0], 'Payment')}</div>
+    <h4>Net method</h4><div class="jes">${jeTable(jes.ns.answers[0], 'Sale')}${jeTable(jes.np.answers[0], 'Payment')}</div>
+    <p>Net sales under the gross method = ${money(amt)}${within ? ` - ${money(disc)} sales discount` : ''} = <b>${money(answers.netSalesG)}</b>. Sales Discounts is contra-revenue. Sales Discounts Forfeited goes under other revenues and gains.</p>`;
+  return { title: 'Sales discounts: gross vs. net', tag: cls ? 'Starts with Example 6.5 numbers' : 'Random numbers', html, answers, jes, solution, isClass: cls };
+};
+
+GENS.allowance = (cls) => {
+  let co, AR, pct, bal, side, wo, woCo;
+  if (cls) { co = 'Hayes'; AR = 250000; pct = 10; bal = 2400; side = 'credit'; wo = 250; woCo = 'Lexington'; }
+  else {
+    co = pick(CO); woCo = pick(['Kent', 'Dayton', 'Akron', 'Oxford', 'Fairfield', 'Toledo']);
+    AR = rnd(120, 640, 5) * 1000; pct = pick([2, 3, 4, 5, 6, 8, 10]);
+    const desired0 = AR * pct / 100;
+    side = Math.random() < 0.65 ? 'credit' : 'debit';
+    bal = rnd(3, Math.max(4, Math.floor(desired0 * 0.5 / 100))) * 100;
+    wo = rnd(4, 60) * 50;
+  }
+  const desired = r2(AR * pct / 100);
+  const bde = side === 'credit' ? r2(desired - bal) : r2(desired + bal);
+  const nrv = AR - desired;
+  const A = 'Allowance for Doubtful Accounts', R = 'Accounts Receivable';
+  const jes = {
+    adj: { label: 'Dec. 31 adjusting entry for bad debt', answers: [[{ a: 'Bad Debt Expense', d: bde }, { a: A, c: bde }]], hint: 'The expense is the plug from Step 2, not the desired balance.' },
+    wo: { label: `Write off ${woCo}'s account`, answers: [[{ a: A, d: wo }, { a: R, c: wo }]], hint: 'You already expensed the estimate. No bad debt expense here.' },
+    rec1: { label: `${woCo} pays: entry 1 (reinstate)`, answers: [[{ a: R, d: wo }, { a: A, c: wo }]] },
+    rec2: { label: `${woCo} pays: entry 2 (collect)`, answers: [[{ a: 'Cash', d: wo }, { a: R, c: wo }]] }
+  };
+  const answers = { desired, bde, nrv, nrvAfter: nrv, woNI: 'No effect' };
+  const html = `<p class="scen">At Dec. 31, before adjusting entries, ${co} Company has Accounts Receivable of <b>${money(AR)}</b> and a <b>${money(bal)} ${side}</b> balance in Allowance for Doubtful Accounts. ${co} estimates <b>${pct}%</b> of its receivables won't be collected. Next year, ${co} learns that <b>${woCo}</b> can't pay the <b>${money(wo)}</b> it owes. Later that year, ${woCo} surprisingly pays in full.</p>
+    <div class="grid">
+      ${f('Step 1: Desired ending allowance balance', 'desired')}
+      ${f('Step 2: Bad debt expense', 'bde')}
+      ${f('NRV of AR after the adjusting entry', 'nrv')}
+    </div>
+    ${je('adj')}${je('wo')}
+    <div class="grid">${f('NRV of AR right after the write-off', 'nrvAfter')}${fs('Effect of the write-off on net income', 'woNI', ['Decreases', 'Increases', 'No effect'])}</div>
+    ${je('rec1')}${je('rec2')}`;
+  const tacc = side === 'credit'
+    ? tAcct('Allowance for Doubtful Accounts', [], [`Bal. ${num(bal)}`, `Adj. ${num(bde)}`], 'r', desired)
+    : tAcct('Allowance for Doubtful Accounts', [`Bal. ${num(bal)}`], ['&nbsp;', `Adj. ${num(bde)}`], 'r', desired);
+  const solution = `<p><b>Step 1:</b> ${money(AR)} × ${pct}% = <b>${money(desired)}</b> credit balance needed.</p>
+    <p><b>Step 2:</b> ${side === 'credit' ? `${money(desired)} - ${money(bal)} existing credit` : `${money(desired)} + ${money(bal)} to wipe out the debit balance`} = <b>${money(bde)}</b>.</p>
+    ${tacc}
+    <div class="jes">${jeTable(jes.adj.answers[0], 'Adjusting entry')}${jeTable(jes.wo.answers[0], 'Write-off')}${jeTable(jes.rec1.answers[0], 'Reinstate')}${jeTable(jes.rec2.answers[0], 'Collect')}</div>
+    <p>NRV after adjusting = ${money(AR)} - ${money(desired)} = <b>${money(nrv)}</b>. After the write-off: ${money(AR - wo)} - ${money(desired - wo)} = <b>${money(nrv)}</b>. Same number, and no income statement effect.</p>`;
+  return { title: 'Allowance method: percentage of receivables', tag: cls ? 'Starts with Hayes / Lexington' : 'Random numbers', html, answers, jes, solution, isClass: cls };
+};
+
+GENS.aging = (cls) => {
+  const co = pick(CO);
+  const names = ['Not yet due', '1-30 days past due', '31-60 days past due', '61-90 days past due', 'Over 90 days past due'];
+  const pcts = [pick([1, 2]), pick([3, 4, 5]), pick([8, 10, 12]), pick([20, 25, 30]), pick([40, 50, 60])];
+  const amts = [rnd(100, 400) * 1000, rnd(30, 120) * 1000, rnd(10, 60) * 1000, rnd(5, 30) * 1000, rnd(2, 15) * 1000];
+  const est = amts.map((a, i) => a * pcts[i] / 100);
+  const req = sum(est);
+  const side = Math.random() < 0.6 ? 'credit' : 'debit';
+  const bal = rnd(5, Math.max(6, Math.floor(req * 0.6 / 100))) * 100;
+  const bde = side === 'credit' ? req - bal : req + bal;
+  const answers = { req, bde, nrv: sum(amts) - req };
+  est.forEach((e, i) => answers['e' + i] = e);
+  const jes = { adj: { label: 'Adjusting entry', answers: [[{ a: 'Bad Debt Expense', d: bde }, { a: 'Allowance for Doubtful Accounts', c: bde }]] } };
+  const html = `<p class="scen">${co} Company prepared this aging schedule at Dec. 31. Before adjusting, Allowance for Doubtful Accounts has a <b>${money(bal)} ${side}</b> balance.</p>
+    <div class="tw"><table><tr><th>Age</th><th class="n">Balance</th><th class="n">% uncollectible</th><th>Estimated uncollectible</th></tr>
+    ${names.map((n, i) => `<tr><td>${n}</td><td class="n">${money(amts[i])}</td><td class="n">${pcts[i]}%</td><td>${inp('e' + i)}</td></tr>`).join('')}
+    <tr class="tot"><td>Total</td><td class="n">${money(sum(amts))}</td><td></td><td>${inp('req')}</td></tr></table></div>
+    <div class="grid">${f('Bad debt expense', 'bde')}${f('NRV of AR after adjusting', 'nrv')}</div>${je('adj')}`;
+  const solution = `<p>Each bucket: balance × %. Total = <b>${money(req)}</b>, which is the desired ending allowance.</p>
+    <p>Bad debt expense = ${money(req)} ${side === 'credit' ? '-' : '+'} ${money(bal)} = <b>${money(bde)}</b>. NRV = ${money(sum(amts))} - ${money(req)} = <b>${money(answers.nrv)}</b>.</p>${jeTable(jes.adj.answers[0])}`;
+  return { title: 'Allowance method: aging schedule', tag: 'Random numbers', html, answers, jes, solution, isClass: cls };
+};
+
+GENS.note = (cls) => {
+  let co, cust, P, r, months, m;
+  if (cls) { co = 'Cleveland'; cust = 'Harrison'; P = 30000; r = 6; months = 6; m = 11; }
+  else {
+    co = pick(CO); cust = pick(CO.filter(c => c !== co));
+    m = pick([9, 10, 11, 12]);
+    months = pick([3, 4, 6, 9, 12].filter(x => x > 13 - m));
+    r = pick([4, 5, 6, 8, 9, 10, 12]);
+    P = rnd(12, 90) * 1000;
+  }
+  const total = r2(P * r / 100 * months / 12);
+  const monthly = r2(total / months);
+  const y1m = 13 - m, y2m = months - y1m;
+  const y1 = r2(monthly * y1m), y2 = r2(total - y1);
+  const cash = r2(P + total);
+  const matM = m + months - 12;
+  const start = `${MONTHS[m - 1]} 1, 2025`, mat = `${MONTHS[matM - 1]} 1, 2026`;
+  const jes = {
+    o: { label: `${start}: record the sale`, answers: [[{ a: 'Notes Receivable', d: P }, { a: 'Sales Revenue', c: P }]] },
+    a: { label: 'Dec. 31, 2025: adjusting entry', answers: [[{ a: 'Interest Receivable', d: y1 }, { a: 'Interest Revenue', c: y1 }]] },
+    mt: { label: `${mat}: cash received`, answers: [[{ a: 'Cash', d: cash }, { a: 'Notes Receivable', c: P }, { a: 'Interest Receivable', c: y1 }, { a: 'Interest Revenue', c: y2 }]], hint: 'Part of the interest was already recorded in 2025.' }
+  };
+  const answers = { total, y1, y2, ir: y1, cash };
+  const html = `<p class="scen">${co} Company sold goods to ${cust} Company for <b>${money(P)}</b> on <b>${start}</b>. ${cust} needed more time to pay, so ${co} accepted a <b>${months}-month, ${r}% note</b>. ${co} has a Dec. 31 year-end and only makes adjusting entries then.</p>
+    <div class="grid">
+      ${f('Total interest over the life of the note', 'total', { tol: 0.5 })}
+      ${f('Interest revenue for 2025', 'y1', { tol: 0.5 })}
+      ${f('Interest revenue for 2026', 'y2', { tol: 0.5 })}
+      ${f('Interest Receivable on 12/31/2025 balance sheet', 'ir', { tol: 0.5 })}
+      ${f('Cash received at maturity', 'cash', { tol: 0.5 })}
+    </div>${je('o')}${je('a')}${je('mt')}`;
+  const solution = `<p>Total interest = ${money(P)} × ${r}% × ${months}/12 = <b>${money(total)}</b>, or ${money(monthly)} per month.</p>
+    <p>2025: ${MONTHS[m - 1]} 1 to Dec. 31 = ${y1m} month${y1m > 1 ? 's' : ''} × ${money(monthly)} = <b>${money(y1)}</b>. 2026: Jan. 1 to ${MONTHS[matM - 1]} 1 = ${y2m} month${y2m > 1 ? 's' : ''} = <b>${money(y2)}</b>.</p>
+    <div class="jes">${jeTable(jes.o.answers[0], start)}${jeTable(jes.a.answers[0], '12/31/2025')}${jeTable(jes.mt.answers[0], mat)}</div>`;
+  return { title: 'Note receivable crossing year-end', tag: cls ? 'Starts with Cleveland / Harrison' : 'Random numbers', html, answers, jes, solution, isClass: cls };
+};
+
+/* =================================================================
+   CHAPTER 7 GENERATORS
+   ================================================================= */
+GENS.perpPer = (cls) => {
+  let B, Pu, C, S;
+  if (cls) { B = 30; Pu = 120; C = 100; S = 125; }
+  else {
+    B = rnd(10, 80) * 1000; Pu = rnd(50, 220) * 1000;
+    C = Math.round((B + Pu) * (0.5 + Math.random() * 0.4) / 1000) * 1000;
+    S = Math.round(C * (1.2 + Math.random() * 0.5) / 1000) * 1000;
+  }
+  const jes = {
+    pp: { label: 'Perpetual: purchase on account', answers: [[{ a: 'Inventory', d: Pu }, { a: 'Accounts Payable', c: Pu }]] },
+    ps: { label: 'Perpetual: sale on account (both entries)', answers: [[{ a: 'Accounts Receivable', d: S }, { a: 'Sales Revenue', c: S }, { a: 'Cost of Goods Sold', d: C }, { a: 'Inventory', c: C }]], hint: 'Perpetual needs two entries for a sale.' },
+    rp: { label: 'Periodic: purchase on account', answers: [[{ a: 'Purchases', d: Pu }, { a: 'Accounts Payable', c: Pu }]] },
+    rs: { label: 'Periodic: sale on account', answers: [[{ a: 'Accounts Receivable', d: S }, { a: 'Sales Revenue', c: S }]], hint: 'Periodic does not touch COGS during the year.' }
+  };
+  const answers = { perpInv: B + Pu - C, perInv: B, cogas: B + Pu };
+  const html = `<p class="scen">A company starts the year with <b>${money(B)}</b> of inventory. During the year it buys <b>${money(Pu)}</b> of inventory on account. It sells inventory that cost <b>${money(C)}</b> for <b>${money(S)}</b> on account.</p>
+    ${je('pp')}${je('ps')}${je('rp')}${je('rs')}
+    <div class="grid">${f('Perpetual: Inventory balance before the year-end count', 'perpInv')}${f('Periodic: Inventory balance before the adjusting entry', 'perInv')}${f('Cost of goods available for sale', 'cogas')}</div>`;
+  const solution = `<div class="jes">${jeTable(jes.pp.answers[0], 'Perpetual purchase')}${jeTable(jes.ps.answers[0], 'Perpetual sale')}${jeTable(jes.rp.answers[0], 'Periodic purchase')}${jeTable(jes.rs.answers[0], 'Periodic sale')}</div>
+    <p>Perpetual Inventory = ${money(B)} + ${money(Pu)} - ${money(C)} = <b>${money(answers.perpInv)}</b>. Periodic Inventory stays at the beginning balance, <b>${money(B)}</b>, until the big adjusting entry. COGAS = <b>${money(B + Pu)}</b>.</p>`;
+  return { title: 'Perpetual vs. periodic entries', tag: cls ? 'Starts with the $30 / $120 class example' : 'Random numbers', html, answers, jes, solution, isClass: cls };
+};
+
+/* ---------- inventory engine ---------- */
+function invCalc(d) {
+  const purch = d.ev.filter(e => e.t === 'p'), sales = d.ev.filter(e => e.t === 's');
+  const layers = [{ u: d.bu, c: d.bc }].concat(purch.map(p => ({ u: p.u, c: p.c })));
+  const ua = sum(layers.map(l => l.u)), cogas = sum(layers.map(l => l.u * l.c));
+  const us = sum(sales.map(s => s.u)), ue = ua - us;
+  const waRaw = cogas / ua, wa = r2(waRaw);
+  const R = { ua, cogas, us, ue, wa, waExact: Math.abs(waRaw - wa) < 1e-9 };
+  R.waEI = r2(ue * wa); R.waCOGS = r2(us * wa);
+  // periodic FIFO / LIFO
+  let need = ue; R.pfEIL = [];
+  for (let i = layers.length - 1; i >= 0 && need > 0; i--) { const t = Math.min(need, layers[i].u); R.pfEIL.unshift({ u: t, c: layers[i].c }); need -= t; }
+  need = us; R.pfCL = [];
+  for (let i = 0; i < layers.length && need > 0; i++) { const t = Math.min(need, layers[i].u); R.pfCL.push({ u: t, c: layers[i].c }); need -= t; }
+  need = ue; R.plEIL = [];
+  for (let i = 0; i < layers.length && need > 0; i++) { const t = Math.min(need, layers[i].u); R.plEIL.push({ u: t, c: layers[i].c }); need -= t; }
+  need = us; R.plCL = [];
+  for (let i = layers.length - 1; i >= 0 && need > 0; i--) { const t = Math.min(need, layers[i].u); R.plCL.push({ u: t, c: layers[i].c }); need -= t; }
+  const val = L => sum(L.map(l => l.u * l.c));
+  R.pfEI = val(R.pfEIL); R.pfCOGS = cogas - R.pfEI; R.plEI = val(R.plEIL); R.plCOGS = cogas - R.plEI;
+  // perpetual FIFO / LIFO
+  const perp = (mode) => {
+    let L = [{ u: d.bu, c: d.bc }]; const rows = [], cogs = [];
+    const lay = () => L.map(l => `${num(l.u)} at ${money(l.c)} = ${money(l.u * l.c)}`).join('<br>');
+    rows.push({ date: `${d.month} 1`, inn: `${num(d.bu)} at ${money(d.bc)} = ${money(d.bu * d.bc)}`, sold: '', bal: lay() });
+    for (const e of d.ev) {
+      if (e.t === 'p') { L.push({ u: e.u, c: e.c }); rows.push({ date: `${d.month} ${e.day}`, inn: `${num(e.u)} at ${money(e.c)} = ${money(e.u * e.c)}`, sold: '', bal: lay() }); }
+      else {
+        let n = e.u; const parts = [];
+        while (n > 0) { const idx = mode === 'fifo' ? 0 : L.length - 1; const t = Math.min(n, L[idx].u); parts.push({ u: t, c: L[idx].c }); L[idx].u -= t; n -= t; if (L[idx].u === 0) L.splice(idx, 1); }
+        const v = val(parts); cogs.push(v);
+        rows.push({ date: `${d.month} ${e.day}`, inn: '', sold: parts.map(p => `${num(p.u)} at ${money(p.c)} = ${money(p.u * p.c)}`).join('<br>') + (parts.length > 1 ? `<br><b>Total ${money(v)}</b>` : ''), bal: lay() || '0' });
+      }
+    }
+    return { rows, cogs, ei: val(L), total: sum(cogs) };
+  };
+  R.qf = perp('fifo'); R.ql = perp('lifo');
+  // moving average
+  let units = d.bu, tot = d.bu * d.bc, avg = d.bc, exact = true; const mrows = [], avgs = [], mcogs = [];
+  mrows.push({ date: `${d.month} 1`, inn: `${num(d.bu)} at ${money(d.bc)} = ${money(d.bu * d.bc)}`, sold: '', bal: `${num(units)} at ${cost2(avg)} = ${money(tot)}` });
+  for (const e of d.ev) {
+    if (e.t === 'p') {
+      const raw = (tot + e.u * e.c) / (units + e.u); const a = r2(raw); if (Math.abs(raw - a) > 1e-9) exact = false;
+      const txt = `(${money(tot)} + ${money(e.u * e.c)}) / (${num(units)} + ${num(e.u)}) = <b>${cost2(a)}</b>`;
+      units += e.u; avg = a; tot = r2(units * avg); avgs.push(avg);
+      mrows.push({ date: `${d.month} ${e.day}`, inn: `${num(e.u)} at ${money(e.c)} = ${money(e.u * e.c)}`, sold: '', bal: `${txt}<br>${num(units)} at ${cost2(avg)} = ${money(tot)}` });
+    } else {
+      const v = r2(e.u * avg); mcogs.push(v); units -= e.u; tot = r2(units * avg);
+      mrows.push({ date: `${d.month} ${e.day}`, inn: '', sold: `${num(e.u)} at ${cost2(avg)} = ${money(v)}`, bal: `${num(units)} at ${cost2(avg)} = ${money(tot)}` });
+    }
+  }
+  R.ma = { rows: mrows, avgs, cogs: mcogs, ei: tot, total: r2(sum(mcogs)), exact };
+  R.rev = us * d.price;
+  return R;
+}
+function randInv() {
+  const trend = Math.random() < 0.6 ? 'rising' : 'falling';
+  const bu = rnd(4, 15) * 100; let c0, c1, c2;
+  if (trend === 'rising') { c0 = rnd(3, 10); c1 = c0 + rnd(1, 4); c2 = c1 + rnd(1, 4); }
+  else { c2 = rnd(3, 10); c1 = c2 + rnd(1, 4); c0 = c1 + rnd(1, 4); }
+  const u1 = rnd(1, 6) * 100;
+  const s1 = rnd(2, (bu + u1) / 100 - 1) * 100;
+  const rem1 = bu + u1 - s1;
+  const u2 = rnd(1, 6) * 100;
+  const s2 = rnd(1, Math.min(6, (rem1 + u2) / 100 - 1)) * 100;
+  const days = [rnd(4, 8), rnd(10, 14), rnd(17, 22), rnd(25, 30)];
+  return { co: pick(CO), month: pick(MONTHS), bu, bc: c0, trend, price: Math.max(c0, c1, c2) + rnd(3, 8),
+    ev: [{ t: 'p', day: days[0], u: u1, c: c1 }, { t: 's', day: days[1], u: s1 }, { t: 'p', day: days[2], u: u2, c: c2 }, { t: 's', day: days[3], u: s2 }] };
+}
+function layerTable(L, label) {
+  return `<table class="jet">${L.map(l => `<tr><td>${num(l.u)} × ${money(l.c)}</td><td></td><td>${num(l.u * l.c)}</td></tr>`).join('')}${L.length > 1 ? `<tr><td><b>${label}</b></td><td></td><td><b>${num(sum(L.map(l => l.u * l.c)))}</b></td></tr>` : ''}</table>`;
+}
+function perpTable(rows) {
+  return `<div class="tw"><table><tr><th>Date</th><th>Purchases</th><th>Sold (COGS)</th><th>Balance</th></tr>${rows.map(r => `<tr><td>${r.date}</td><td>${r.inn}</td><td>${r.sold}</td><td>${r.bal}</td></tr>`).join('')}</table></div>`;
+}
+GENS.inventory = (cls) => {
+  let d;
+  if (cls) d = { co: 'Roosevelt', month: 'October', bu: 1000, bc: 5, trend: 'rising', price: 12, ev: [{ t: 'p', day: 6, u: 200, c: 8 }, { t: 's', day: 10, u: 500 }, { t: 'p', day: 22, u: 300, c: 9 }, { t: 's', day: 29, u: 100 }] };
+  else { for (let i = 0; i < 4000; i++) { d = randInv(); const t = invCalc(d); if (t.waExact && t.ma.exact) break; } }
+  const R = invCalc(d);
+  const [p1, s1, p2, s2] = d.ev;
+  const M = d.month;
+  const hi = d.trend === 'rising' ? 'FIFO' : 'LIFO';
+  const answers = {
+    ua: R.ua, cogas: R.cogas, us: R.us, ue: R.ue,
+    wa: R.wa, waEI: R.waEI, waCOGS: R.waCOGS,
+    pfEI: R.pfEI, pfCOGS: R.pfCOGS, plEI: R.plEI, plCOGS: R.plCOGS,
+    ma1: R.ma.avgs[0], mc1: R.ma.cogs[0], ma2: R.ma.avgs[1], mc2: R.ma.cogs[1], maEI: R.ma.ei, maCOGS: R.ma.total,
+    qf1: R.qf.cogs[0], qf2: R.qf.cogs[1], qfEI: R.qf.ei, fifoSame: 'They are the same',
+    ql1: R.ql.cogs[0], ql2: R.ql.cogs[1], qlEI: R.ql.ei, qlCOGS: R.ql.total,
+    rev: R.rev, hiGP: hi, hiEI: hi
+  };
+  const meth = ['Weighted average', 'FIFO', 'LIFO'];
+  const html = `<p class="scen">${d.co} Company had <b>${num(d.bu)} units at ${money(d.bc)}</b> on ${M} 1. Its ${M} transactions:</p>
+    <div class="tw"><table style="max-width:560px"><tr><th>Date</th><th>Purchases</th><th>Sales</th></tr>
+    ${d.ev.map(e => `<tr><td>${M} ${e.day}</td><td>${e.t === 'p' ? `${num(e.u)} units at ${money(e.c)}` : ''}</td><td>${e.t === 's' ? `${num(e.u)} units at ${money(d.price)} selling price` : ''}</td></tr>`).join('')}</table></div>
+    <p class="muted">Round unit costs to the penny, like in class. Totals within a dollar count as right.</p>
+    <div class="step"><h4>The basics</h4><div class="grid">
+      ${f('Units available for sale', 'ua', { tol: 0 })}${f('Cost of goods available for sale', 'cogas')}${f('Units sold', 'us', { tol: 0 })}${f('Units in ending inventory', 'ue', { tol: 0 })}</div></div>
+    <div class="step"><h4>Periodic: weighted-average cost</h4><div class="grid">
+      ${f('Weighted-average cost per unit', 'wa', { tol: 0.01 })}${f('Ending inventory', 'waEI')}${f('Cost of goods sold', 'waCOGS')}</div></div>
+    <div class="step"><h4>Periodic: FIFO</h4><div class="grid">${f('Ending inventory', 'pfEI')}${f('Cost of goods sold', 'pfCOGS')}</div></div>
+    <div class="step"><h4>Periodic: LIFO</h4><div class="grid">${f('Ending inventory', 'plEI')}${f('Cost of goods sold', 'plCOGS')}</div></div>
+    <div class="step"><h4>Perpetual: moving average</h4><div class="grid">
+      ${f(`Average cost after the ${M} ${p1.day} purchase`, 'ma1', { tol: 0.01 })}${f(`COGS for the ${M} ${s1.day} sale`, 'mc1')}
+      ${f(`Average cost after the ${M} ${p2.day} purchase`, 'ma2', { tol: 0.01 })}${f(`COGS for the ${M} ${s2.day} sale`, 'mc2')}
+      ${f('Ending inventory', 'maEI')}${f('Total cost of goods sold', 'maCOGS')}</div></div>
+    <div class="step"><h4>Perpetual: FIFO</h4><div class="grid">
+      ${f(`COGS for the ${M} ${s1.day} sale`, 'qf1')}${f(`COGS for the ${M} ${s2.day} sale`, 'qf2')}${f('Ending inventory', 'qfEI')}
+      ${fs('How does this compare to periodic FIFO?', 'fifoSame', ['They are the same', 'Perpetual is higher', 'Perpetual is lower'])}</div></div>
+    <div class="step"><h4>Perpetual: LIFO</h4><div class="grid">
+      ${f(`COGS for the ${M} ${s1.day} sale`, 'ql1')}${f(`COGS for the ${M} ${s2.day} sale`, 'ql2')}${f('Ending inventory', 'qlEI')}${f('Total cost of goods sold', 'qlCOGS')}</div></div>
+    <div class="step"><h4>Compare (periodic)</h4><p class="muted" style="margin:0 0 8px">Costs were <b>${d.trend}</b> this month.</p><div class="grid">
+      ${f('Sales revenue', 'rev')}${fs('Which method gives the highest gross profit?', 'hiGP', meth)}${fs('Which method gives the highest ending inventory?', 'hiEI', meth)}</div></div>`;
+  const layersAll = [{ u: d.bu, c: d.bc }, { u: p1.u, c: p1.c }, { u: p2.u, c: p2.c }];
+  const solution = `<h4>Basics</h4>
+    <p>Units available = ${layersAll.map(l => num(l.u)).join(' + ')} = <b>${num(R.ua)}</b>. COGAS = ${layersAll.map(l => money(l.u * l.c)).join(' + ')} = <b>${money(R.cogas)}</b>. Units sold = ${num(s1.u)} + ${num(s2.u)} = <b>${num(R.us)}</b>. Ending units = <b>${num(R.ue)}</b>.</p>
+    <h4>Periodic weighted average</h4>
+    <p>${money(R.cogas)} / ${num(R.ua)} = <b>${cost2(R.wa)}</b>. EI = ${num(R.ue)} × ${cost2(R.wa)} = <b>${money(R.waEI)}</b>. COGS = ${num(R.us)} × ${cost2(R.wa)} = <b>${money(R.waCOGS)}</b>.</p>
+    <div class="cols2"><div><h4>Periodic FIFO</h4>EI (most recent ${num(R.ue)} units):${layerTable(R.pfEIL, 'EI')}COGS (earliest ${num(R.us)}):${layerTable(R.pfCL, 'COGS')}<p>EI <b>${money(R.pfEI)}</b>, COGS <b>${money(R.pfCOGS)}</b></p></div>
+    <div><h4>Periodic LIFO</h4>EI (earliest ${num(R.ue)} units):${layerTable(R.plEIL, 'EI')}COGS (most recent ${num(R.us)}):${layerTable(R.plCL, 'COGS')}<p>EI <b>${money(R.plEI)}</b>, COGS <b>${money(R.plCOGS)}</b></p></div></div>
+    <h4>Perpetual moving average</h4>${perpTable(R.ma.rows)}<p>EI <b>${money(R.ma.ei)}</b>. COGS = ${R.ma.cogs.map(money).join(' + ')} = <b>${money(R.ma.total)}</b>.</p>
+    <h4>Perpetual FIFO</h4>${perpTable(R.qf.rows)}<p>EI <b>${money(R.qf.ei)}</b>. COGS = ${R.qf.cogs.map(money).join(' + ')} = <b>${money(R.qf.total)}</b>. Same as periodic FIFO.</p>
+    <h4>Perpetual LIFO</h4>${perpTable(R.ql.rows)}<p>EI <b>${money(R.ql.ei)}</b>. COGS = ${R.ql.cogs.map(money).join(' + ')} = <b>${money(R.ql.total)}</b>.</p>
+    <h4>Compare</h4><div class="tw"><table><tr><th></th><th class="n">Wtd avg</th><th class="n">FIFO</th><th class="n">LIFO</th></tr>
+      <tr><td>Revenue</td><td class="n">${num(R.rev)}</td><td class="n">${num(R.rev)}</td><td class="n">${num(R.rev)}</td></tr>
+      <tr><td>COGS</td><td class="n">${num(R.waCOGS)}</td><td class="n">${num(R.pfCOGS)}</td><td class="n">${num(R.plCOGS)}</td></tr>
+      <tr><td>Gross profit</td><td class="n">${num(r2(R.rev - R.waCOGS))}</td><td class="n">${num(R.rev - R.pfCOGS)}</td><td class="n">${num(R.rev - R.plCOGS)}</td></tr>
+      <tr><td>Ending inventory</td><td class="n">${num(R.waEI)}</td><td class="n">${num(R.pfEI)}</td><td class="n">${num(R.plEI)}</td></tr></table></div>
+    <p>Costs were ${d.trend}, so <b>${hi}</b> pushes the ${d.trend === 'rising' ? 'cheaper old' : 'cheaper new'} costs into COGS and gives the highest gross profit and ending inventory.</p>`;
+  return { title: 'Inventory valuation: all six methods', tag: cls ? 'Starts with Roosevelt (class exercise)' : `Random numbers, ${d.trend} costs`, html, answers, jes: {}, solution, isClass: cls };
+};
+
+GENS.countAdj = (cls) => {
+  const co = pick(CO);
+  const book = rnd(50, 400) * 1000 + rnd(0, 9) * 100;
+  const diff = rnd(5, 60) * 100;
+  const short = Math.random() < 0.65;
+  const count = short ? book - diff : book + diff;
+  const jes = { adj: { label: 'Year-end adjusting entry', answers: [short ? [{ a: 'Cost of Goods Sold', d: diff }, { a: 'Inventory', c: diff }] : [{ a: 'Inventory', d: diff }, { a: 'Cost of Goods Sold', c: diff }]], hint: 'Move Inventory to the count. COGS takes the other side.' } };
+  const html = `<p class="scen">${co} Company uses a <b>perpetual</b> system. At year-end the Inventory account shows <b>${money(book)}</b>. The physical count comes to <b>${money(count)}</b>.</p>
+    <div class="grid">${f('Amount of the adjustment', 'diff')}</div>${je('adj')}`;
+  const solution = `<p>Difference = <b>${money(diff)}</b>. The count is ${short ? 'lower' : 'higher'} than the books, so ${short ? 'debit COGS and credit Inventory' : 'debit Inventory and credit COGS'}.</p>${jeTable(jes.adj.answers[0])}`;
+  return { title: 'Perpetual: physical count adjustment', tag: 'Random numbers', html, answers: { diff }, jes, solution, isClass: cls };
+};
+
+GENS.ownership = (cls) => {
+  const X = cls ? 'Marsh' : pick(CO);
+  const T = {
+    consigneeExcl: a => ({ t: `${money(a)} of goods that ${X} is holding on consignment for another company were not included in the count.`, ans: 'No change', why: `${X} is the consignee. The consignor owns these, so leaving them out was right.` }),
+    consigneeIncl: a => ({ t: `${money(a)} of goods that ${X} is holding on consignment for Reed Co. <b>were included</b> in the count.`, ans: 'Subtract', why: `${X} is only the consignee. Reed Co. (the consignor) owns them, so take them out.` }),
+    consignorOut: a => ({ t: `${X} shipped ${money(a)} of goods to a retailer on consignment. The retailer still has them, so they weren't in ${X}'s count.`, ans: 'Add', why: `${X} is the consignor and still owns the goods.` }),
+    fobDestOut: a => ({ t: `Goods costing ${money(a)} were shipped by ${X} to a customer f.o.b. destination on Dec. 30. They arrive Jan. 5 and weren't in the count.`, ans: 'Add', why: 'FOB destination: title passes when they arrive, so they are still the seller\'s.' }),
+    fobSPOut: a => ({ t: `Goods costing ${money(a)} were shipped by ${X} to a customer f.o.b. shipping point on Dec. 30. They arrive Jan. 5 and weren't in the count.`, ans: 'No change', why: 'FOB shipping point: the customer owned them once they shipped.' }),
+    fobSPIn: a => ({ t: `Goods costing ${money(a)} were shipped to ${X} by a vendor f.o.b. shipping point on Dec. 31 and received Jan. 3. They weren't in the count.`, ans: 'Add', why: `FOB shipping point: ${X} owned them the moment they shipped.` }),
+    fobDestIn: a => ({ t: `Goods costing ${money(a)} were shipped to ${X} by a vendor f.o.b. destination on Dec. 29 and received Jan. 4. They weren't in the count.`, ans: 'No change', why: `FOB destination: the vendor still owned them at Dec. 31.` })
+  };
+  let count, items;
+  if (cls) { count = 502000; items = [T.consigneeExcl(61000), T.fobDestOut(38000), T.fobSPIn(51000)]; }
+  else { count = rnd(200, 900) * 1000; items = shuffle(Object.keys(T)).slice(0, 4).map(k => T[k](rnd(10, 90) * 1000)); }
+  const amt = s => parseNum(s.t.match(/\$[\d,]+/)[0]);
+  let fin = count; items.forEach(it => { if (it.ans === 'Add') fin += amt(it); if (it.ans === 'Subtract') fin -= amt(it); });
+  const answers = { fin }; items.forEach((it, i) => answers['i' + i] = it.ans);
+  const html = `<p class="scen">${X} Company's physical count at Dec. 31 came to <b>${money(count)}</b>. Decide how each item affects the count.</p>
+    ${items.map((it, i) => `<div style="margin:10px 0"><p style="margin:0 0 6px">${i + 1}. ${it.t}</p>${sel('i' + i, ['Add', 'Subtract', 'No change'])}</div>`).join('')}
+    <div class="grid">${f('Correct ending inventory', 'fin')}</div>`;
+  const solution = `<ol>${items.map(it => `<li><b>${it.ans}.</b> ${it.why}</li>`).join('')}</ol><p>Correct inventory = <b>${money(fin)}</b>.</p>`;
+  return { title: 'Goods in transit and consignment', tag: cls ? 'Starts with Marsh (class example)' : 'Random items', html, answers, jes: {}, solution, isClass: cls };
+};
+
+GENS.schedule = (cls) => {
+  const co = pick(CO);
+  const BI = rnd(20, 120) * 1000, Pu = rnd(150, 500) * 1000, FI = rnd(2, 15) * 1000, PRA = rnd(1, 10) * 1000, PD = rnd(1, 8) * 1000;
+  const cogp = Pu + FI - PRA - PD, cogas = BI + cogp;
+  const EI = rnd(20, Math.floor(cogas * 0.4 / 1000)) * 1000;
+  const cogs = cogas - EI;
+  const html = `<p class="scen">${co} Company uses a periodic system. Beginning inventory <b>${money(BI)}</b>. Purchases <b>${money(Pu)}</b>. Freight-in <b>${money(FI)}</b>. Purchase returns and allowances <b>${money(PRA)}</b>. Purchase discounts <b>${money(PD)}</b>. Ending inventory from the count <b>${money(EI)}</b>.</p>
+    <div class="grid">${f('Cost of goods purchased', 'cogp')}${f('Cost of goods available for sale', 'cogas')}${f('Cost of goods sold', 'cogs')}
+    ${fs('If freight-in were left out by mistake, COGS would be', 'fiErr', ['Overstated', 'Understated', 'Unaffected'])}</div>`;
+  const solution = `<table class="jet"><tr><td>Beginning inventory</td><td></td><td>${num(BI)}</td></tr><tr><td>Purchases</td><td>${num(Pu)}</td><td></td></tr><tr><td>+ Freight-in</td><td>${num(FI)}</td><td></td></tr><tr><td>- Purchase returns &amp; allowances</td><td>(${num(PRA)})</td><td></td></tr><tr><td>- Purchase discounts</td><td>(${num(PD)})</td><td></td></tr><tr><td>Cost of goods purchased</td><td></td><td>${num(cogp)}</td></tr><tr><td><b>Cost of goods available</b></td><td></td><td><b>${num(cogas)}</b></td></tr><tr><td>- Ending inventory</td><td></td><td>(${num(EI)})</td></tr><tr><td><b>Cost of goods sold</b></td><td></td><td><b>${num(cogs)}</b></td></tr></table>
+    <p>Leaving out freight-in shrinks COGAS. Ending inventory comes from the count, so the whole shortfall lands in COGS: <b>understated</b>.</p>`;
+  return { title: 'Schedule of cost of goods sold', tag: 'Random numbers', html, answers: { cogp, cogas, cogs, fiErr: 'Understated' }, jes: {}, solution, isClass: cls };
+};
+
+/* =================================================================
+   CHAPTER 8 GENERATORS
+   ================================================================= */
+GENS.lcnrv = (cls) => {
+  const co = pick(CO);
+  let items;
+  for (let t = 0; t < 500; t++) {
+    items = shuffle(['Kayaks', 'Paddles', 'Life vests', 'Tents', 'Coolers', 'Sleeping bags', 'Camp stoves', 'Backpacks']).slice(0, 4).map(n => {
+      const cost = rnd(10, 90) * 1000;
+      const sp = Math.round(cost * (0.85 + Math.random() * 0.5) / 1000) * 1000;
+      const comp = Math.random() < 0.4 ? rnd(1, 8) * 500 : 0;
+      const sell = rnd(1, 10) * 500;
+      const nrv = sp - comp - sell;
+      return { n, cost, sp, comp, sell, nrv, l: Math.min(cost, nrv) };
+    });
+    const below = items.filter(i => i.nrv < i.cost).length;
+    if (below >= 1 && below <= 3 && items.every(i => i.nrv > 0 && i.nrv !== i.cost)) break;
+  }
+  const tc = sum(items.map(i => i.cost)), tl = sum(items.map(i => i.l)), loss = tc - tl;
+  const answers = { tl, loss }; items.forEach((it, i) => { answers['n' + i] = it.nrv; answers['l' + i] = it.l; });
+  const jes = { wd: { label: 'Write-down entry (perpetual)', answers: [[{ a: 'Inventory Loss', d: loss }, { a: 'Inventory', c: loss }], [{ a: 'Cost of Goods Sold', d: loss }, { a: 'Inventory', c: loss }]], hint: 'Either the loss account or COGS works.' } };
+  const html = `<p class="scen">${co} Outfitters applies LCNRV on an <b>individual-item</b> basis. Year-end data:</p>
+    <div class="tw"><table><tr><th>Item</th><th class="n">Cost</th><th class="n">Est. selling price</th><th class="n">Cost to complete</th><th class="n">Cost to sell</th><th>NRV</th><th>LCNRV</th></tr>
+    ${items.map((it, i) => `<tr><td>${it.n}</td><td class="n">${money(it.cost)}</td><td class="n">${money(it.sp)}</td><td class="n">${money(it.comp)}</td><td class="n">${money(it.sell)}</td><td style="min-width:120px">${inp('n' + i)}</td><td style="min-width:120px">${inp('l' + i)}</td></tr>`).join('')}
+    <tr class="tot"><td>Total</td><td class="n">${money(tc)}</td><td></td><td></td><td></td><td></td><td>${inp('tl')}</td></tr></table></div>
+    <div class="grid">${f('Amount of the write-down', 'loss')}</div>${je('wd')}`;
+  const solution = `<div class="tw"><table><tr><th>Item</th><th class="n">NRV</th><th class="n">LCNRV</th></tr>${items.map(it => `<tr><td>${it.n}</td><td class="n">${num(it.sp)} - ${num(it.comp)} - ${num(it.sell)} = ${num(it.nrv)}</td><td class="n">${num(it.l)}</td></tr>`).join('')}<tr class="tot"><td>Total</td><td></td><td class="n">${num(tl)}</td></tr></table></div>
+    <p>Write-down = ${money(tc)} - ${money(tl)} = <b>${money(loss)}</b>.</p><div class="jes">${jeTable(jes.wd.answers[0], 'Loss method')}${jeTable(jes.wd.answers[1], 'or COGS method')}</div>`;
+  return { title: 'Lower of cost or NRV (individual items)', tag: 'Random numbers', html, answers, jes, solution, isClass: cls };
+};
+
+GENS.grossProfit = (cls) => {
+  let co, BI, Pu, type, rate, sales, cogs;
+  if (cls) { co = 'Hoover'; BI = 150000; Pu = 200000; type = 'sales'; rate = 35; sales = 400000; cogs = 260000; }
+  else {
+    co = pick(CO); BI = rnd(50, 300) * 1000; Pu = rnd(150, 500) * 1000;
+    type = Math.random() < 0.5 ? 'sales' : 'markup';
+    const target = (BI + Pu) * (0.6 + Math.random() * 0.3);
+    if (type === 'sales') { rate = pick([20, 25, 30, 35, 40]); sales = Math.round(target / (1 - rate / 100) / 1000) * 1000; cogs = r2(sales * (1 - rate / 100)); }
+    else { rate = pick([25, 40, 50, 60]); cogs = Math.round(target / 1000) * 1000; sales = cogs * (100 + rate) / 100; }
+  }
+  const cogas = BI + Pu, ei = r2(cogas - cogs);
+  const gp = type === 'sales' ? rate : r2(rate / (100 + rate) * 100);
+  const answers = { cogas, gp, cp: r2(100 - gp), cogs, ei };
+  const wording = type === 'sales' ? `Its normal gross profit is <b>${rate}% of selling price</b>.` : `It prices goods to sell at <b>${rate}% over cost</b>.`;
+  const html = `<p class="scen">${co} Company needs to estimate inventory at Jan. 31. Inventory on Jan. 1 was <b>${money(BI)}</b>, January purchases were <b>${money(Pu)}</b>, and January sales revenue was <b>${money(sales)}</b>. ${wording}</p>
+    <div class="grid">${f('Cost of goods available for sale', 'cogas')}${f('Gross profit as a % of selling price', 'gp', { tol: 0.06, ph: '%' })}${f('COGS as a % of selling price', 'cp', { tol: 0.06, ph: '%' })}${f('Estimated cost of goods sold', 'cogs')}${f('Estimated ending inventory', 'ei')}</div>`;
+  const solution = `<p>COGAS = ${money(BI)} + ${money(Pu)} = <b>${money(cogas)}</b>.</p>
+    ${type === 'markup' ? `<p>Convert the markup: ${rate}% / (100% + ${rate}%) = <b>${gp}%</b> of selling price. So COGS is ${r2(100 - gp)}% of sales, or just ${money(sales)} / ${(1 + rate / 100).toFixed(2)}.</p>` : `<p>GP is ${rate}% of sales, so COGS is <b>${100 - rate}%</b> of sales.</p>`}
+    <p>Estimated COGS = <b>${money(cogs)}</b>. Estimated EI = ${money(cogas)} - ${money(cogs)} = <b>${money(ei)}</b>.</p>`;
+  return { title: 'Gross profit method', tag: cls ? 'Starts with Hoover-style setup' : (type === 'markup' ? 'Random numbers, markup on cost' : 'Random numbers'), html, answers, jes: {}, solution, isClass: cls };
+};
+
+/* ===== CH9 PRACTICE START: add Chapter 9 generators here, e.g. GENS.basket = (cls) => {...} ===== */
+/* ===== CH9 PRACTICE END ===== */
+
+/* =================================================================
+   QUIZ BANKS
+   { q: question, a: correct answer, w: [wrong answers], e: explanation }
+   ================================================================= */
+const QUIZ = {};
+QUIZ.ch6 = [
+  { q: 'Under the gross method, where does the Sales Discounts account appear?', a: 'As a deduction from sales revenue (contra-revenue)', w: ['Under other revenues and gains', 'As an operating expense', 'Under other expenses and losses'], e: 'Sales Discounts has a debit balance and gets subtracted from Sales Revenue to get net sales.' },
+  { q: 'Under the net method, where does Sales Discounts Forfeited appear?', a: 'Other revenues and gains', w: ['As a deduction from sales revenue', 'As an operating expense', 'As a contra asset'], e: 'Forfeited discounts are extra money earned from late payers. They go below operating income in other revenues and gains.' },
+  { q: 'A $5,000 sale is made with terms 2/10, n/30. Using the gross method, the customer pays within 7 days. What is the debit to Sales Discounts?', a: '$100', w: ['$0', '$4,900', '$5,000'], e: '$5,000 × 2% = $100. Cash is debited $4,900 and AR is credited the full $5,000.' },
+  { q: 'A $5,000 sale has terms 2/10, n/30, recorded with the net method. The customer pays on day 25. What is the credit to Sales Discounts Forfeited?', a: '$100', w: ['$0', '$4,900', '$5,100'], e: 'AR was recorded at $4,900. The customer pays $5,000, so the extra $100 is credited to Sales Discounts Forfeited.' },
+  { q: 'A company gives a new retailer a 10% trade discount off a $2,000 list price. What amount is recorded as sales revenue?', a: '$1,800', w: ['$2,000', '$2,000 with a $200 Sales Discount', '$200'], e: 'Trade discounts are never recorded. The customer is billed net, so the sale is $1,800.' },
+  { q: 'Before adjusting, AR is $200,000 and the allowance has a $3,000 DEBIT balance. The company estimates 5% of AR is uncollectible. Bad debt expense is:', a: '$13,000', w: ['$10,000', '$7,000', '$3,000'], e: 'Desired credit balance is $10,000. To get from a $3,000 debit to a $10,000 credit you need $13,000.' },
+  { q: 'Before adjusting, AR is $200,000 and the allowance has a $3,000 CREDIT balance. The company estimates 5% of AR is uncollectible. Bad debt expense is:', a: '$7,000', w: ['$10,000', '$13,000', '$3,000'], e: '$10,000 desired minus $3,000 already there = $7,000.' },
+  { q: 'Under the allowance method, writing off a $900 uncollectible account will:', a: 'Have no effect on net income or the net realizable value of AR', w: ['Decrease net income by $900', 'Decrease the NRV of AR by $900', 'Increase bad debt expense by $900'], e: 'Debit Allowance, credit AR. Both sides of the NRV calculation drop by $900, and no expense is recorded.' },
+  { q: 'A customer pays $400 on an account that was written off last year. The first entry is:', a: 'Debit Accounts Receivable, credit Allowance for Doubtful Accounts', w: ['Debit Cash, credit Bad Debt Expense', 'Debit Allowance for Doubtful Accounts, credit Accounts Receivable', 'Debit Cash, credit Allowance for Doubtful Accounts'], e: 'Reinstate the account first (reverse the write-off), then record the cash collection against AR.' },
+  { q: 'The net realizable value of accounts receivable is:', a: 'The amount the company expects to actually collect', w: ['The total amount customers owe', 'The balance in the allowance account', 'Bad debt expense for the year'], e: 'NRV = AR minus the allowance.' },
+  { q: 'On the balance sheet, Allowance for Doubtful Accounts is reported:', a: 'As a deduction from Accounts Receivable', w: ['As a current liability', 'As an operating expense', 'Under stockholders\' equity'], e: 'It\'s a contra-asset account, so it gets subtracted from AR.' },
+  { q: 'The percentage-of-receivables method is described as emphasizing:', a: 'The balance sheet, with bad debt expense as the plug', w: ['The income statement, with expense as a % of sales', 'The direct write-off of accounts', 'Cash collections'], e: 'You first figure out what the allowance should be (balance sheet), then plug the expense.' },
+  { q: 'Why is the direct write-off method generally not allowed?', a: 'It doesn\'t match bad debt expense to the period of the sale, and AR isn\'t reported at NRV', w: ['It is too complicated to apply', 'It overstates bad debt expense every year', 'It requires an aging schedule'], e: 'Expense only hits when you find out the account is bad, often a later period than the sale.' },
+  { q: 'On Nov. 1, a company accepts a $24,000, 4-month, 9% note. Its year-end is Dec. 31. How much interest revenue is reported this year?', a: '$360', w: ['$720', '$180', '$2,160'], e: '$24,000 × 9% × 2/12 = $360 for November and December.' },
+  { q: 'Same note: $24,000, 4-month, 9%, dated Nov. 1. How much cash is received at maturity?', a: '$24,720', w: ['$24,360', '$26,160', '$24,000'], e: 'Principal plus all 4 months of interest: $24,000 + ($24,000 × 9% × 4/12) = $24,720.' },
+  { q: 'On the maturity date of a note that crossed year-end, Interest Revenue is credited for:', a: 'Only the interest earned in the current year', w: ['The full interest on the note', 'Zero, since it was all accrued', 'The interest earned last year'], e: 'Last year\'s portion was already recorded as Interest Receivable, so that gets credited instead.' }
+];
+QUIZ.ch7 = [
+  { q: 'In a perpetual system, a purchase of merchandise for resale is debited to:', a: 'Inventory', w: ['Purchases', 'Cost of Goods Sold', 'Accounts Payable'], e: 'Perpetual updates Inventory continuously, including on purchases.' },
+  { q: 'In a periodic system, the entry for a sale on account is:', a: 'Debit Accounts Receivable, credit Sales Revenue only', w: ['Debit AR, credit Sales, plus debit COGS, credit Inventory', 'Debit COGS, credit Inventory', 'Debit Purchases, credit Sales Revenue'], e: 'Periodic records COGS only at the end of the period.' },
+  { q: 'A seed company sends seed packets to a hardware store to sell. Unsold packets go back to the seed company. Whose inventory are the seeds in the store?', a: 'The seed company\'s (consignor)', w: ['The hardware store\'s (consignee)', 'Split between both', 'Neither, until sold'], e: 'Consigned goods stay on the consignor\'s books until the consignee sells them.' },
+  { q: 'In a consignment arrangement, the consignee is the company that:', a: 'Holds and sells the goods for the owner', w: ['Owns the goods and ships them out', 'Manufactures the goods', 'Buys the goods for its own use'], e: 'The consignor ships, the consignee holds and sells.' },
+  { q: 'Goods are shipped FOB shipping point on Dec. 28 and arrive Jan. 3. On Dec. 31, the goods belong to:', a: 'The buyer', w: ['The seller', 'The trucking company', 'Neither party'], e: 'FOB shipping point means title passes when the goods leave the seller.' },
+  { q: 'With FOB destination, the seller should recognize revenue:', a: 'When the goods arrive at the buyer', w: ['When the goods are shipped', 'When the order is placed', 'When cash is received'], e: 'Title (and control) passes at the destination.' },
+  { q: 'When prices are rising, which method produces the highest gross profit?', a: 'FIFO', w: ['LIFO', 'Weighted average', 'They are all the same'], e: 'FIFO puts the older, cheaper costs in COGS, so COGS is lowest and gross profit is highest.' },
+  { q: 'When prices are falling, which method produces the highest gross profit?', a: 'LIFO', w: ['FIFO', 'Weighted average', 'They are all the same'], e: 'Now the newest costs are the cheapest. LIFO puts them in COGS.' },
+  { q: 'When prices are rising, which method produces the lowest ending inventory?', a: 'LIFO', w: ['FIFO', 'Weighted average', 'Specific identification'], e: 'LIFO leaves the old, cheaper costs in ending inventory.' },
+  { q: 'A perpetual system shows Inventory of $84,000. The physical count is $81,500. The adjusting entry is:', a: 'Debit Cost of Goods Sold $2,500, credit Inventory $2,500', w: ['Debit Inventory $2,500, credit Cost of Goods Sold $2,500', 'Debit Inventory Loss $81,500, credit Inventory $81,500', 'No entry is needed'], e: 'The count is lower than the books, so reduce Inventory and push the difference into COGS.' },
+  { q: 'Which account is NOT part of the "big" periodic adjusting entry?', a: 'Accounts Payable', w: ['Purchases', 'Freight-In', 'Purchase Discounts'], e: 'The entry updates Inventory, records COGS, and closes Purchases, Freight-In, Purchase Returns and Allowances, and Purchase Discounts.' },
+  { q: 'Freight-in on merchandise purchased for resale:', a: 'Increases cost of goods available for sale', w: ['Is a selling expense', 'Decreases cost of goods purchased', 'Has no effect on cost of goods sold'], e: 'All costs to get goods ready for sale are part of inventory cost.' },
+  { q: 'Purchase returns and allowances in the schedule of cost of goods sold:', a: 'Decrease cost of goods purchased', w: ['Increase cost of goods purchased', 'Increase ending inventory', 'Are added to sales revenue'], e: 'Returns reduce what you actually paid for goods.' },
+  { q: 'How do FIFO periodic and FIFO perpetual compare?', a: 'They give the same ending inventory and COGS', w: ['Perpetual always gives a higher COGS', 'Periodic always gives a higher ending inventory', 'They only match when prices are falling'], e: 'The oldest layers are the oldest layers, whether you look at each sale or at the end.' },
+  { q: 'Beginning inventory is 200 units at $10. The company buys 300 units at $12, then sells 400 units. Using periodic weighted average, ending inventory is:', a: '$1,120', w: ['$1,200', '$1,000', '$4,480'], e: '($2,000 + $3,600) / 500 = $11.20. Ending inventory = 100 × $11.20 = $1,120.' },
+  { q: 'Same data (200 at $10, buy 300 at $12, sell 400). Using periodic LIFO, cost of goods sold is:', a: '$4,600', w: ['$4,400', '$4,800', '$4,480'], e: 'LIFO sells the newest first: 300 × $12 + 100 × $10 = $4,600.' },
+  { q: 'Under the moving-average method, a new average cost is computed:', a: 'After each purchase', w: ['After each sale', 'Only at the end of the period', 'Once a year'], e: 'That\'s why it "moves." Sales just use the latest average.' },
+  { q: 'LIFO is not permitted under:', a: 'IFRS', w: ['U.S. GAAP', 'Either set of standards', 'The perpetual system'], e: 'U.S. GAAP allows LIFO. IFRS does not.' },
+  { q: 'Cost of goods available for sale is allocated between:', a: 'Ending inventory and cost of goods sold', w: ['Purchases and sales', 'Beginning inventory and ending inventory', 'Freight-in and purchase discounts'], e: 'Every dollar of COGAS ends up in one of those two places.' },
+  { q: 'Which statement about cost flow assumptions is true?', a: 'The assumption does not have to match the physical flow of goods', w: ['LIFO must match the physical flow', 'Companies can switch methods every year', 'Specific identification can\'t be used to manipulate income'], e: 'It\'s an assumption about costs, not about which box goes out the door.' }
+];
+QUIZ.ch8 = [
+  { q: 'Net realizable value is:', a: 'Estimated selling price minus estimated costs to complete and sell', w: ['Replacement cost of the inventory', 'Original cost minus depreciation', 'Selling price minus original cost'], e: 'NRV = selling price - cost to complete - cost to sell (disposal, transport).' },
+  { q: 'An item cost $50. Estimated selling price is $60, cost to complete is $6, and cost to sell is $8. What is it reported at under LCNRV?', a: '$46', w: ['$50', '$60', '$54'], e: 'NRV = $60 - $6 - $8 = $46, which is lower than the $50 cost.' },
+  { q: 'Why do companies use LCNRV?', a: 'So inventory isn\'t reported above the amount it\'s expected to bring in, and losses are recognized when they happen', w: ['To maximize reported income', 'Because the tax code requires it', 'To report inventory at current replacement cost'], e: 'When the revenue-producing ability drops below cost, the asset gets written down and the loss hits that period.' },
+  { q: 'Item A: cost $100, NRV $90. Item B: cost $200, NRV $230. Total LCNRV on an individual-item basis is:', a: '$290', w: ['$300', '$320', '$310'], e: 'A at $90 (NRV) + B at $200 (cost) = $290.' },
+  { q: 'Using the same items (A: cost $100, NRV $90; B: cost $200, NRV $230), the write-down is:', a: '$10', w: ['$0', '$30', '$20'], e: 'Total cost $300 - total LCNRV $290 = $10. B\'s gain doesn\'t offset A\'s loss.' },
+  { q: 'Under a perpetual system, the entry to write inventory down to NRV is:', a: 'Debit Inventory Loss (or COGS), credit Inventory', w: ['Debit Inventory, credit Inventory Loss', 'Debit Allowance, credit Inventory', 'No entry, just a note disclosure'], e: 'Either loss or COGS is debited. Inventory gets credited.' },
+  { q: 'Which companies can use lower-of-cost-or-market (LCM) instead of LCNRV?', a: 'Those using LIFO or the retail inventory method', w: ['Those using FIFO', 'All public companies', 'Companies using the periodic system'], e: 'It\'s an exception for LIFO and retail method users.' },
+  { q: 'The gross profit method is used to:', a: 'Estimate inventory when a count isn\'t possible, like interim reports or a fire', w: ['Value inventory at year-end for the annual report', 'Calculate LCNRV', 'Choose between FIFO and LIFO'], e: 'It\'s an estimation tool, not a replacement for a year-end count.' },
+  { q: 'Goods are sold at a 25% markup on cost. Gross profit as a percent of selling price is:', a: '20%', w: ['25%', '75%', '33.3%'], e: '25% / (100% + 25%) = 20%.' },
+  { q: 'Beginning inventory $40,000, purchases $160,000, sales $220,000, gross profit 30% of sales. Estimated ending inventory is:', a: '$46,000', w: ['$66,000', '$134,000', '$20,000'], e: 'COGAS $200,000. COGS = 70% × $220,000 = $154,000. EI = $46,000.' },
+  { q: 'Beginning inventory $50,000, purchases $130,000, sales $240,000. Goods sell at 60% over cost. Estimated ending inventory is:', a: '$30,000', w: ['$84,000', '$0', '$36,000'], e: 'COGS = $240,000 / 1.60 = $150,000. COGAS $180,000 - $150,000 = $30,000.' },
+  { q: 'If gross profit is 35% of selling price, cost of goods sold equals:', a: '65% of sales', w: ['35% of sales', '135% of sales', '65% of cost of goods available'], e: 'Sales = COGS + gross profit, so COGS is the other 65%.' },
+  { q: 'Which of these is a required inventory disclosure?', a: 'The inventory costing method used', w: ['The names of all suppliers', 'Each item\'s selling price', 'The number of physical counts taken'], e: 'Disclose composition, financing arrangements, and the costing method, applied consistently.' }
+];
+/* ===== CH9 QUIZ START: add Chapter 9 questions to this array, same format as above ===== */
+QUIZ.ch9 = [];
+/* ===== CH9 QUIZ END ===== */
+
+/* =================================================================
+   QUIZ ENGINE
+   ================================================================= */
+function renderQuiz(el, questions, opts = {}) {
+  if (!questions.length) { el.innerHTML = `<div class="card"><div class="placeholder">Quiz questions for this chapter will be added once the slides are in.</div></div>`; return; }
+  const qs = opts.shuffleQs ? shuffle(questions) : questions;
+  let answered = 0, right = 0;
+  const total = qs.length;
+  el.innerHTML = `<div class="qbar"><b class="qscore">0 / ${total} answered</b><div class="qprog"><i></i></div><button class="btn ghost sm qreset" type="button">${opts.exam ? 'New exam' : 'Reset quiz'}</button></div>
+    <div class="qlist">${qs.map((q, i) => `<div class="q" data-i="${i}"><div class="qn">Question ${i + 1}${q.tag ? ` · ${q.tag}` : ''}</div><div class="qt">${q.q}</div>
+      ${shuffle([q.a, ...q.w]).map(o => `<button class="opt" type="button">${o}</button>`).join('')}<div class="exp" hidden></div></div>`).join('')}</div><div class="qfinal"></div>`;
+  const upd = () => {
+    el.querySelector('.qscore').textContent = opts.exam ? `${right} right · ${answered} / ${total} answered · ${right * 3} pts` : `${right} right · ${answered} / ${total} answered`;
+    el.querySelector('.qprog i').style.width = (answered / total * 100) + '%';
+    if (answered === total) {
+      const pct = Math.round(right / total * 100);
+      el.querySelector('.qfinal').innerHTML = `<div class="card final"><div class="big">${right} / ${total}</div><p>${opts.exam ? `${right * 3} of ${total * 3} points. ` : ''}${pct}% correct. ${pct >= 90 ? 'You\'re in great shape.' : pct >= 75 ? 'Solid. Review the ones you missed.' : 'Go back to the Learn tab for the topics you missed, then try again.'}</p></div>`;
+    }
+  };
+  el.querySelectorAll('.q').forEach(card => {
+    const q = qs[+card.dataset.i];
+    card.querySelectorAll('.opt').forEach(b => b.onclick = () => {
+      const ok = b.textContent === q.a;
+      card.querySelectorAll('.opt').forEach(x => { x.disabled = true; if (x.textContent === q.a) x.classList.add('right'); });
+      if (!ok) b.classList.add('wrong');
+      const ex = card.querySelector('.exp'); ex.hidden = false;
+      ex.innerHTML = `<b class="${ok ? 'ok' : 'bad'}">${ok ? 'Correct.' : 'Not quite.'}</b> ${q.e}`;
+      answered++; if (ok) right++; upd();
+    });
+  });
+  el.querySelector('.qreset').onclick = () => opts.exam ? startExam() : renderQuiz(el, questions, opts);
+}
+function startExam() {
+  const tags = { ch6: 'Ch 6', ch7: 'Ch 7', ch8: 'Ch 8', ch9: 'Ch 9' };
+  const pool = Object.keys(QUIZ).flatMap(k => QUIZ[k].map(q => Object.assign({}, q, { tag: tags[k] || k })));
+  const picked = shuffle(pool).slice(0, 26);
+  renderQuiz(document.getElementById('examArea'), picked, { exam: true });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* =================================================================
+   CHECKLIST (overview)
+   ================================================================= */
+const CHECK = [
+  ['ch6', 'Gross and net method entries for sales discounts, paid inside and outside the discount period'],
+  ['ch6', 'Where Sales Discounts and Sales Discounts Forfeited show up on the income statement'],
+  ['ch6', 'Bad debt expense with the percentage-of-receivables method (T-account, two steps)'],
+  ['ch6', 'Adjusting entry and write-off entry, plus their effects on the statements'],
+  ['ch6', 'Collecting an account that was already written off'],
+  ['ch6', 'Net realizable value and balance sheet presentation of AR'],
+  ['ch6', 'Interest revenue on a note that spans two years'],
+  ['ch7', 'Perpetual vs. periodic entries for purchases and sales'],
+  ['ch7', 'Consignor vs. consignee, and whose books the goods go on'],
+  ['ch7', 'FOB shipping point vs. FOB destination, ownership and revenue timing'],
+  ['ch7', 'Periodic: weighted average, FIFO, LIFO (set up without a template)'],
+  ['ch7', 'Perpetual: moving average, FIFO, LIFO (set up without a template)'],
+  ['ch7', 'Effects of cost flow methods with rising and falling prices'],
+  ['ch7', 'Perpetual physical count adjusting entry, and accounts in the periodic adjusting entry'],
+  ['ch7', 'Schedule of cost of goods sold and how inventory activities affect it'],
+  ['ch8', 'LCNRV on an individual-item basis, and why companies use it'],
+  ['ch8', 'Gross profit method (including markup-on-cost wording)'],
+  ['ch9', 'Capitalizing costs beyond the purchase price'],
+  ['ch9', 'Assets acquired for common stock and basket purchases'],
+  ['ch9', 'Interest capitalization: qualifying assets, period, the five steps, statement effects'],
+  ['ch9', 'Gain or loss on the sale of PP&amp;E (depreciation to date of sale first)']
+];
+function renderChecklist() {
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem('exam2checks') || '{}'); } catch (e) {}
+  const el = document.getElementById('checklist');
+  const lab = { ch6: 'Ch 6', ch7: 'Ch 7', ch8: 'Ch 8', ch9: 'Ch 9' };
+  el.innerHTML = CHECK.map((c, i) => `<label class="check"><input type="checkbox" data-i="${i}" ${saved[i] ? 'checked' : ''}><span>${c[1]} <a href="#${c[0]}-learn" class="pill">${lab[c[0]]}</a></span></label>`).join('');
+  el.querySelectorAll('input').forEach(cb => cb.onchange = () => {
+    saved[cb.dataset.i] = cb.checked;
+    try { localStorage.setItem('exam2checks', JSON.stringify(saved)); } catch (e) {}
+  });
+}
+
+/* =================================================================
+   NAVIGATION
+   ================================================================= */
+function showPage(page, sub) {
+  document.querySelectorAll('.page').forEach(p => p.classList.toggle('on', p.id === 'page-' + page));
+  document.querySelectorAll('#nav button').forEach(b => b.classList.toggle('on', b.dataset.page === page));
+  if (sub) {
+    const tabs = document.querySelector(`.subtabs[data-for="${page}"]`);
+    if (tabs) {
+      tabs.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.sub === sub));
+      document.querySelectorAll(`#page-${page} .sub`).forEach(s => s.classList.toggle('on', s.id === `${page}-${sub}`));
+    }
+  }
+}
+function fromHash() {
+  const h = location.hash.replace('#', '');
+  if (!h) return showPage('overview');
+  const [page, sub] = h.split('-');
+  if (document.getElementById('page-' + page)) showPage(page, sub);
+}
+document.querySelectorAll('#nav button').forEach(b => b.onclick = () => {
+  const tabs = document.querySelector(`.subtabs[data-for="${b.dataset.page}"] button.on`);
+  location.hash = b.dataset.page + (tabs ? '-' + tabs.dataset.sub : '');
+  window.scrollTo({ top: 0 });
+});
+document.querySelectorAll('.subtabs').forEach(t => t.querySelectorAll('button').forEach(b => b.onclick = () => {
+  location.hash = t.dataset.for + '-' + b.dataset.sub;
+}));
+window.addEventListener('hashchange', fromHash);
+
+/* theme toggle */
+document.getElementById('themeBtn').onclick = () => {
+  const root = document.documentElement;
+  const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme = dark ? 'light' : 'dark';
+  try { localStorage.setItem('exam2theme', root.dataset.theme); } catch (e) {}
+};
+try { const t = localStorage.getItem('exam2theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+
+/* boot */
+document.querySelectorAll('.problem').forEach(mountProblem);
+document.querySelectorAll('.quiz').forEach(q => renderQuiz(q, QUIZ[q.dataset.bank] || []));
+renderChecklist();
+const poolSize = Object.values(QUIZ).reduce((s, a) => s + a.length, 0);
+document.getElementById('examPoolNote').textContent = `Question pool right now: ${poolSize} questions across Chapters 6-8. Chapter 9 questions get added automatically once they're written.`;
+document.getElementById('startExam').onclick = startExam;
+fromHash();
+</script>
+</body>
+</html>
